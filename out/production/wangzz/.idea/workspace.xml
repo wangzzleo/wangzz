@@ -92,8 +92,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/wangzz/http/HttpTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+            <state relative-caret-position="285">
+              <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -388,12 +388,12 @@
       <workItem from="1555567240294" duration="2457000" />
       <workItem from="1555573183157" duration="2540000" />
       <workItem from="1555636979699" duration="18552000" />
-      <workItem from="1555663888555" duration="1893000" />
+      <workItem from="1555663888555" duration="1781000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76890000" />
+    <option name="totallyTimeSpent" value="76778000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -886,8 +886,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/wangzz/http/HttpTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        <state relative-caret-position="285">
+          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
