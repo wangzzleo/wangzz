@@ -5,26 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29949af2-ad4e-41bf-b82b-e5f67cc11b07" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/jsoup-1.11.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/wangzz/dictionary/CreateWaterWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/.idea/libraries/lib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/wangzz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/dictionary/NameGeneratorStater.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/dictionary/NameGeneratorStater.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/http/HttpClientUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/http/HttpClientUtil$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/http/HttpClientUtil$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/http/HttpClientUtil$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/http/HttpClientUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/http/HttpClientUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/http/HttpTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/http/HttpTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/mybatisLearn/TestSqlSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/mybatisLearn/TestSqlSession.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/dictionary/NameGeneratorStater.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/dictionary/NameGeneratorStater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/http/HttpClientUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/http/HttpClientUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/http/HttpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/http/HttpTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/mybatisLearn/TestSqlSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/mybatisLearn/TestSqlSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wangzz/dictionary/NameGeneratorStater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wangzz/dictionary/NameGeneratorStater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wangzz/http/HttpClientUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wangzz/http/HttpClientUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wangzz/http/HttpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wangzz/http/HttpTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wangzz/mybatisLearn/TestSqlSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wangzz/mybatisLearn/TestSqlSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JAXBUtil$User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JAXBUtil$User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JAXBUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JAXBUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/xml/JAXBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/xml/JAXBUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wangzz/xml/JAXBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wangzz/xml/JAXBUtil.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,29 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/mybatis-config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/wangzz/mybatisLearn/TestSqlSession.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/wangzz/xml/JAXBUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state relative-caret-position="167">
+              <caret line="96" column="45" selection-start-line="96" selection-start-column="45" selection-end-line="96" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,77 +37,93 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/javax/xml/bind/JAXB.java">
+        <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/javax/xml/bind/annotation/XmlType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-944">
+              <caret line="385" column="18" selection-start-line="385" selection-start-column="18" selection-end-line="385" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/javax/xml/bind/annotation/XmlAccessOrder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/wangzz/xml/JaxbDateAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/java/lang/String.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/javax/xml/bind/annotation/adapters/XmlAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="223">
-              <caret line="406" column="23" selection-start-line="406" selection-start-column="23" selection-end-line="406" selection-end-column="23" />
+              <caret line="164" column="52" selection-start-line="164" selection-start-column="33" selection-end-line="164" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/java/io/StringWriter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3140">
+              <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
               <folding>
-                <element signature="e#14124#14125#0" expanded="true" />
-                <element signature="e#14164#14165#0" expanded="true" />
+                <element signature="e#5641#5642#0" expanded="true" />
+                <element signature="e#5678#5679#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/wangzz/lambda/TestLambda.java">
+        <entry file="file://$PROJECT_DIR$/src/com/wangzz/exception/XMLConvertException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1235">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/wangzz/dictionary/NameGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="36" selection-end-column="13" />
+            <state relative-caret-position="133">
+              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#117#118#0" expanded="true" />
+                <element signature="e#151#152#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/wangzz/dictionary/NameGeneratorStater.java">
+        <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/javax/xml/bind/JAXBContext.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="131">
+              <caret line="664" column="31" selection-start-line="664" selection-start-column="31" selection-end-line="664" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/fastjson-1.2.46.jar!/com/alibaba/fastjson/JSONObject.class">
+        <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/javax/xml/bind/Unmarshaller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1045">
-              <caret line="90" column="34" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/java/util/Map.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3515">
-              <caret line="211" column="6" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/wangzz/dictionary/NameExporter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="9" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="38" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="131">
+              <caret line="664" column="30" selection-start-line="664" selection-start-column="30" selection-end-line="664" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -171,6 +155,8 @@
       <find>E4E3F546D8DFE526F9CE0CB7D0E4BF40; PSTM=1554272179; BAIDUID=9AFAA641F6E3FB26AB382AD7B79ABA7C:FG=1; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; BDUSS=jRpeTV2T0dtSFhjSGZGQlJkYUFSa01EQXFlSmVFa1p6dmxDSk9kRmJNTkxiTjljRVFBQUFBJCQAAAAAAAAAAAEAAABSDDwO1vHJyNHauuzR1QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEvft1xL37dcM; PSINO=2; locale=zh; ZD_ENTRY=baidu; H_PS_PSSID=1458_21123_28723_28558_28836_28584_26350_28603; delPer=1; Hm_lvt_010e9ef9290225e88b64ebf20166c8c4=1555483336,1555483969,1555485589,1555659482; Hm_lpvt_010e9ef9290225e88b64ebf20166c8c4=1555659897</find>
       <find>post</find>
       <find>HttpRequestBase</find>
+      <find>encoding</find>
+      <find>JAXB_ENCODING</find>
     </findStrings>
     <replaceStrings>
       <replace>TestLambda</replace>
@@ -207,6 +193,8 @@
         <option value="$PROJECT_DIR$/src/com/wangzz/dictionary/NameScore.java" />
         <option value="$PROJECT_DIR$/src/com/wangzz/lambda/FilterTest.java" />
         <option value="$PROJECT_DIR$/src/com/wangzz/mybatisLearn/TestSqlSession.java" />
+        <option value="$PROJECT_DIR$/src/com/wangzz/exception/XMLConvertException.java" />
+        <option value="$PROJECT_DIR$/src/com/wangzz/xml/JaxbDateAdapter.java" />
         <option value="$PROJECT_DIR$/src/com/wangzz/xml/JAXBUtil.java" />
       </list>
     </option>
@@ -233,11 +221,6 @@
             <path>
               <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
               <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangzz" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -251,28 +234,7 @@
               <item name="wangzz" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="dictionary" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatisLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
@@ -280,12 +242,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="wangzz" type="462c0819:PsiDirectoryNode" />
               <item name="xml" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -427,7 +383,7 @@
       <workItem from="1555663888555" duration="3797000" />
       <workItem from="1555895348276" duration="22078000" />
       <workItem from="1556155285177" duration="2224000" />
-      <workItem from="1556240569875" duration="325000" />
+      <workItem from="1556240569875" duration="14846000" />
     </task>
     <task id="LOCAL-00001" summary="baidu spider">
       <created>1555665896717</created>
@@ -443,24 +399,38 @@
       <option name="project" value="LOCAL" />
       <updated>1555667664707</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="SAXB 学习记录！ 内容参考：https://blog.csdn.net/wn084/article/details/80853587">
+      <created>1556249038117</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556249038118</updated>
+    </task>
+    <task id="LOCAL-00004" summary="SAXB 学习记录2！ 内容参考：https://blog.csdn.net/wn084/article/details/80853587">
+      <created>1556249083683</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1556249083683</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103421000" />
+    <option name="totallyTimeSpent" value="117942000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.28666666" visible="true" weight="0.2629199" />
-      <window_info id="Structure" order="1" sideWeight="0.7133333" side_tool="true" weight="0.25516796" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.28444445" visible="true" weight="0.2629199" />
+      <window_info id="Structure" order="1" sideWeight="0.71555555" side_tool="true" weight="0.2629199" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32965517" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.499354" weight="0.37931034" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.498708" visible="true" weight="0.37931034" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -469,7 +439,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.500646" side_tool="true" weight="0.32965517" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.501292" side_tool="true" weight="0.37931034" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32965517" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -512,7 +482,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="baidu spider" />
-    <option name="LAST_COMMIT_MESSAGE" value="baidu spider" />
+    <MESSAGE value="SAXB 学习记录！ 内容参考：https://blog.csdn.net/wn084/article/details/80853587" />
+    <MESSAGE value="SAXB 学习记录2！ 内容参考：https://blog.csdn.net/wn084/article/details/80853587" />
+    <option name="LAST_COMMIT_MESSAGE" value="SAXB 学习记录2！ 内容参考：https://blog.csdn.net/wn084/article/details/80853587" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -527,172 +499,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.ideaLibSources/httpcore-4.4.6-sources.jar!/org/apache/http/message/BasicNameValuePair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/httpcore-4.4.6-sources.jar!/org/apache/http/HttpEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/java/net/URL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2052">
-          <caret line="139" column="19" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/java/net/URLConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2356">
-          <caret line="159" column="22" selection-start-line="159" selection-start-column="22" selection-end-line="159" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/java/net/HttpURLConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/fastjson-1.2.46.jar!/com/alibaba/fastjson/JSONArray.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_202/jre/lib/rt.jar!/sun/net/www/protocol/https/HttpsURLConnectionImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/httpclient-4.5.3-sources.jar!/org/apache/http/impl/client/HttpClientBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="1230" selection-start-line="1230" selection-end-line="1230" />
-          <folding>
-            <element signature="e#9276#9277#0" expanded="true" />
-            <element signature="e#9322#9323#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/httpclient-4.5.3-sources.jar!/org/apache/http/impl/client/CloseableHttpClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="52" column="2" lean-forward="true" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/httpclient-4.5.3-sources.jar!/org/apache/http/client/HttpClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="89" column="47" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/httpclient-4.5.3-sources.jar!/org/apache/http/impl/client/HttpClients.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="e#1727#1728#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/httpclient-4.5.3-sources.jar!/org/apache/http/client/methods/HttpGet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="47" column="44" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/httpclient-4.5.3-sources.jar!/org/apache/http/client/methods/HttpDelete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/httpclient-4.5.3-sources.jar!/org/apache/http/client/methods/HttpPost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-          <folding>
-            <element signature="e#2231#2232#0" expanded="true" />
-            <element signature="e#2254#2255#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/httpclient-4.5.3-sources.jar!/org/apache/http/client/methods/HttpRequestBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="43" column="37" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/httpcore-4.4.6-sources.jar!/org/apache/http/message/HeaderGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="126" column="49" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/httpcore-4.4.6-sources.jar!/org/apache/http/message/AbstractHttpMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="122" column="32" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
-          <folding>
-            <element signature="e#3820#3821#0" expanded="true" />
-            <element signature="e#3872#3873#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/httpclient-4.5.3-sources.jar!/org/apache/http/impl/client/EntityEnclosingRequestWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/httpclient-4.5.3-sources.jar!/org/apache/http/client/methods/HttpEntityEnclosingRequestBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="57" column="16" lean-forward="true" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
-          <folding>
-            <element signature="e#1913#1914#0" expanded="true" />
-            <element signature="e#1949#1950#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="210" column="12" selection-start-line="210" selection-start-column="12" selection-end-line="210" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/httpcore-4.4.6-sources.jar!/org/apache/http/HeaderElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ideaLibSources/httpcore-4.4.6-sources.jar!/org/apache/http/message/BasicHeaderElement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -931,21 +737,193 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/javax/xml/transform/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/java/math/MathContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="77" column="36" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/java/math/BigDecimal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="873" column="11" selection-start-line="873" selection-start-column="11" selection-end-line="873" selection-end-column="11" />
+          <folding>
+            <element signature="e#37141#37142#0" expanded="true" />
+            <element signature="e#37188#37189#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="136" column="12" selection-start-line="136" selection-start-column="12" selection-end-line="136" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/jre/lib/rt.jar!/com/sun/xml/internal/bind/v2/runtime/JAXBContextImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="620" column="26" selection-start-line="620" selection-start-column="26" selection-end-line="620" selection-end-column="26" />
+          <folding>
+            <element signature="e#23077#23078#0" expanded="true" />
+            <element signature="e#23146#23147#0" expanded="true" />
+            <element signature="e#23198#23199#0" expanded="true" />
+            <element signature="e#23269#23270#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/jre/lib/rt.jar!/com/sun/xml/internal/bind/v2/runtime/MarshallerImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-265">
+          <caret line="395" column="39" selection-start-line="395" selection-start-column="35" selection-end-line="395" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/javax/xml/bind/Marshaller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="590" column="16" selection-start-line="590" selection-start-column="16" selection-end-line="590" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/jre/lib/rt.jar!/com/sun/xml/internal/bind/v2/runtime/unmarshaller/UnmarshallingContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="301" column="18" selection-start-line="301" selection-start-column="18" selection-end-line="301" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/jre/lib/rt.jar!/com/sun/xml/internal/bind/v2/runtime/unmarshaller/SAXConnector.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/jre/lib/rt.jar!/com/sun/xml/internal/bind/v2/runtime/unmarshaller/UnmarshallerImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="164" column="30" selection-start-line="164" selection-start-column="30" selection-end-line="164" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/javax/xml/bind/Unmarshaller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="664" column="30" selection-start-line="664" selection-start-column="30" selection-end-line="664" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/javax/xml/bind/JAXBContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="664" column="31" selection-start-line="664" selection-start-column="31" selection-end-line="664" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/javax/management/modelmbean/XMLParseException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-798">
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/javax/xml/bind/JAXB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="406" column="23" selection-start-line="406" selection-start-column="23" selection-end-line="406" selection-end-column="23" />
+        <state relative-caret-position="118">
+          <caret line="441" column="75" lean-forward="true" selection-start-line="441" selection-start-column="75" selection-end-line="441" selection-end-column="75" />
           <folding>
             <element signature="e#14124#14125#0" expanded="true" />
             <element signature="e#14164#14165#0" expanded="true" />
+            <element signature="e#16320#16321#0" expanded="true" />
+            <element signature="e#16360#16361#0" expanded="true" />
+            <element signature="e#17318#17319#0" expanded="true" />
+            <element signature="e#17358#17359#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/java/io/StringReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2570">
+          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/javax/xml/bind/annotation/adapters/XmlAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="164" column="52" selection-start-line="164" selection-start-column="33" selection-end-line="164" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/javax/xml/bind/annotation/XmlAccessOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/javax/xml/bind/annotation/XmlType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-944">
+          <caret line="385" column="18" selection-start-line="385" selection-start-column="18" selection-end-line="385" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/java/io/StringWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3140">
+          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+          <folding>
+            <element signature="e#5641#5642#0" expanded="true" />
+            <element signature="e#5678#5679#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wangzz/exception/XMLConvertException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="e#117#118#0" expanded="true" />
+            <element signature="e#151#152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wangzz/xml/JaxbDateAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/wangzz/xml/JAXBUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        <state relative-caret-position="167">
+          <caret line="96" column="45" selection-start-line="96" selection-start-column="45" selection-end-line="96" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

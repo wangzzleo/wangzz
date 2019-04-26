@@ -15,9 +15,7 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.math.BigDecimal;
 import java.math.MathContext;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class JAXBUtil {
     public static void main(String[] args) throws Exception {
@@ -31,7 +29,11 @@ public class JAXBUtil {
         strings.add("宝马");
         strings.add("宝马2");
         strings.add("宝马3");
-        User user = new User(1,"宙哥", new BigDecimal(1.01).setScale(2, BigDecimal.ROUND_DOWN), strings,new Date());
+        List<User.Test> map = new ArrayList<>();
+        User.Test test = new User.Test();
+        test.setTest("asdfsdf");
+        map.add(test);
+        User user = new User(new CommonResponseStatus("1", "2", "3"), 1,"宙哥", new BigDecimal(1.01).setScale(2, BigDecimal.ROUND_DOWN), strings,new Date(), test);
         //JAXB.marshal(user, System.out);
         //User user = convertXmlToJavaBean(User.class, xmlStr);
         System.out.println(convertJavabeanToXml(user));
@@ -65,6 +67,9 @@ public class JAXBUtil {
     @XmlRootElement(name = "USER")
     private static class User {
 
+        @XmlElement(name = "STATUS")
+        private CommonResponseStatus status;
+
         @XmlElement(name = "IDDDD")
         private Integer id;
 
@@ -82,6 +87,33 @@ public class JAXBUtil {
         @XmlElement(name = "BIRTH")
         private Date birthday;
 
+        @XmlElement(name = "map")
+        private Test map;
+
+        @Data
+        @NoArgsConstructor
+        @AllArgsConstructor
+        @XmlAccessorType(XmlAccessType.FIELD)
+        public static class Test {
+            @XmlElement(name = "test")
+            private String test;
+        }
+    }
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlRootElement(name = "STATUS")
+    public static class CommonResponseStatus {
+        @XmlElement(name = "MESSAGE")
+        private String code;
+
+        @XmlElement(name = "SEVERITY")
+        private String severity;
+
+        @XmlElement(name = "MESSAGE")
+        private String message;
     }
 
 }

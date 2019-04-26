@@ -5,26 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29949af2-ad4e-41bf-b82b-e5f67cc11b07" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/jsoup-1.11.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/wangzz/dictionary/CreateWaterWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/.idea/libraries/lib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/wangzz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/dictionary/NameGeneratorStater.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/dictionary/NameGeneratorStater.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/http/HttpClientUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/http/HttpClientUtil$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/http/HttpClientUtil$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/http/HttpClientUtil$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/http/HttpClientUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/http/HttpClientUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/http/HttpTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/http/HttpTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/mybatisLearn/TestSqlSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/mybatisLearn/TestSqlSession.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/dictionary/NameGeneratorStater.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/dictionary/NameGeneratorStater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/http/HttpClientUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/http/HttpClientUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/http/HttpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/http/HttpTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/mybatisLearn/TestSqlSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/mybatisLearn/TestSqlSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wangzz/dictionary/NameGeneratorStater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wangzz/dictionary/NameGeneratorStater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wangzz/http/HttpClientUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wangzz/http/HttpClientUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wangzz/http/HttpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wangzz/http/HttpTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wangzz/mybatisLearn/TestSqlSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wangzz/mybatisLearn/TestSqlSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JAXBUtil$User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JAXBUtil$User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JAXBUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JAXBUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/xml/JAXBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/xml/JAXBUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wangzz/xml/JAXBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wangzz/xml/JAXBUtil.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/wangzz/xml/JAXBUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="33" column="111" selection-start-line="33" selection-start-column="111" selection-end-line="33" selection-end-column="111" />
+            <state relative-caret-position="110">
+              <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/wangzz/xml/JaxbDateAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="76">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,9 +104,7 @@
               <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
               <folding>
                 <element signature="e#117#118#0" expanded="true" />
-                <element signature="e#140#141#0" expanded="true" />
-                <element signature="e#191#192#0" expanded="true" />
-                <element signature="e#225#226#0" expanded="true" />
+                <element signature="e#151#152#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -237,11 +221,6 @@
             <path>
               <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
               <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangzz" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -249,13 +228,6 @@
               <item name="wangzz" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="dictionary" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
@@ -269,73 +241,7 @@
               <item name="wangzz" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatisLearn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="wangzz" type="462c0819:PsiDirectoryNode" />
               <item name="xml" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangzz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="javax" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="javax" type="462c0819:PsiDirectoryNode" />
-              <item name="management" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="javax" type="462c0819:PsiDirectoryNode" />
-              <item name="management" type="462c0819:PsiDirectoryNode" />
-              <item name="modelmbean" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -477,7 +383,7 @@
       <workItem from="1555663888555" duration="3797000" />
       <workItem from="1555895348276" duration="22078000" />
       <workItem from="1556155285177" duration="2224000" />
-      <workItem from="1556240569875" duration="8269000" />
+      <workItem from="1556240569875" duration="16385000" />
     </task>
     <task id="LOCAL-00001" summary="baidu spider">
       <created>1555665896717</created>
@@ -493,11 +399,25 @@
       <option name="project" value="LOCAL" />
       <updated>1555667664707</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="SAXB 学习记录！ 内容参考：https://blog.csdn.net/wn084/article/details/80853587">
+      <created>1556249038117</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556249038118</updated>
+    </task>
+    <task id="LOCAL-00004" summary="SAXB 学习记录2！ 内容参考：https://blog.csdn.net/wn084/article/details/80853587">
+      <created>1556249083683</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1556249083683</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111365000" />
+    <option name="totallyTimeSpent" value="119481000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -562,7 +482,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="baidu spider" />
-    <option name="LAST_COMMIT_MESSAGE" value="baidu spider" />
+    <MESSAGE value="SAXB 学习记录！ 内容参考：https://blog.csdn.net/wn084/article/details/80853587" />
+    <MESSAGE value="SAXB 学习记录2！ 内容参考：https://blog.csdn.net/wn084/article/details/80853587" />
+    <option name="LAST_COMMIT_MESSAGE" value="SAXB 学习记录2！ 内容参考：https://blog.csdn.net/wn084/article/details/80853587" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -938,30 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/wangzz/exception/XMLConvertException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding>
-            <element signature="e#117#118#0" expanded="true" />
-            <element signature="e#140#141#0" expanded="true" />
-            <element signature="e#191#192#0" expanded="true" />
-            <element signature="e#225#226#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/java/io/StringWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3140">
-          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
-          <folding>
-            <element signature="e#5641#5642#0" expanded="true" />
-            <element signature="e#5678#5679#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -973,16 +871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="164" column="52" selection-start-line="164" selection-start-column="33" selection-end-line="164" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/wangzz/xml/JaxbDateAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1000,10 +888,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_202/src.zip!/java/io/StringWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3140">
+          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+          <folding>
+            <element signature="e#5641#5642#0" expanded="true" />
+            <element signature="e#5678#5679#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wangzz/exception/XMLConvertException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="e#117#118#0" expanded="true" />
+            <element signature="e#151#152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wangzz/xml/JaxbDateAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/wangzz/xml/JAXBUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="33" column="111" selection-start-line="33" selection-start-column="111" selection-end-line="33" selection-end-column="111" />
+        <state relative-caret-position="110">
+          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
