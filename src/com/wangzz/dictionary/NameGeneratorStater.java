@@ -21,10 +21,6 @@ public class NameGeneratorStater {
         Thread exporter = new Thread(nameExporter);
         generator.start();
         exporter.start();
-
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-
-        }));
     }
 
 }

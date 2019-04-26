@@ -16,7 +16,7 @@ public class TestSqlSession {
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
             BlogMapper mapper = sqlSession.getMapper(BlogMapper.class);
-            Blog blog = mapper.selectBlog(2).orElseThrow(() -> new IllegalArgumentException("不存在！"));
+            Blog blog = mapper.selectBlog(1).orElseThrow(() -> new IllegalArgumentException("不存在！"));
             System.out.println(blog);
         } finally {
             sqlSession.close();

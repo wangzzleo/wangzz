@@ -11,6 +11,7 @@ import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.config.Registry;
 import org.apache.http.config.RegistryBuilder;
 import org.apache.http.conn.ConnectTimeoutException;
@@ -35,6 +36,7 @@ import javax.net.ssl.SSLSocket;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.SocketTimeoutException;
+import java.net.URI;
 import java.security.GeneralSecurityException;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
@@ -57,7 +59,6 @@ public class HttpClientUtil {
      * 默认字符编码
      */
     public static final String charset="UTF-8";
-    //private static HttpClient client = null;
 
     private static PoolingHttpClientConnectionManager cm = null;
 
@@ -88,76 +89,59 @@ public class HttpClientUtil {
         return httpClient;
     }
 
-    public static String sendPostSSLRequest(String url, String body ,String charset,String mimeType){
-        HttpEntity entity = null;
-        if (StringUtils.isNotBlank(body)) {
-            entity = new StringEntity(body, ContentType.create(mimeType, charset));
+    public static String sendPostSSLRequest(String url, Header[] headers, List<BasicNameValuePair> pairList, String charset, String mimeType){
+        HttpPost post = new HttpPost();
+        try {
+            HttpEntity entity = new UrlEncodedFormEntity(pairList, charset);
+            post.setEntity(entity);
+            post.setHeaders(headers);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
         }
-        return sendPostSSLRequest(url, entity, charset, mimeType);
+        return sendSSLRequest(url, post, charset, mimeType);
     }
 
-    public static String sendPostSSLRequest(String url, List<BasicNameValuePair> pairList , String charset, String mimeType){
-        HttpEntity entity = null;
-        if (pairList != null && pairList.size() > 0) {
-            try {
-                entity = new UrlEncodedFormEntity(pairList, charset);
-            } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
-            }
-        }
-        return sendPostSSLRequest(url, entity, charset, mimeType);
+    public static String sendGetSSLRequest(String url, Header[] headers, String charset, String mimeType){
+        HttpGet get = new HttpGet();
+        get.setHeaders(headers);
+        return sendSSLRequest(url, get, charset, mimeType);
     }
-
 
     /**
      * 发送一个 Post 请求, 使用指定的字符集编码.
      *
      * @param url
-     * @param entity entity
      * @param charset 编码
      * @return ResponseBody, 使用指定的字符集编码.
      * @throws ConnectTimeoutException 建立链接超时异常
      * @throws SocketTimeoutException  响应超时
      * @throws Exception
      */
-    public static String sendPostSSLRequest(String url, HttpEntity entity ,String charset ,String mimeType){
+    public static String sendSSLRequest(String url, HttpRequestBase requestBase, String charset, String mimeType){
         HttpClient client = null;
-        HttpGet post = new HttpGet(url);
         String result = "通信失败";
+        if (requestBase == null) {
+            throw new IllegalArgumentException("HttpRequestBase 不能为空!");
+        }
         try {
-
-            post.setHeader("Content-Type", mimeType);
-            post.setHeader("Cookie", "BIDUPSID=E4E3F546D8DFE526F9CE0CB7D0E4BF40; PSTM=1554272179; BAIDUID=9AFAA641F6E3FB26AB382AD7B79ABA7C:FG=1; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; BDUSS=jRpeTV2T0dtSFhjSGZGQlJkYUFSa01EQXFlSmVFa1p6dmxDSk9kRmJNTkxiTjljRVFBQUFBJCQAAAAAAAAAAAEAAABSDDwO1vHJyNHauuzR1QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEvft1xL37dcM; PSINO=2; locale=zh; ZD_ENTRY=baidu; H_PS_PSSID=1458_21123_28723_28558_28836_28584_26350_28603; delPer=1; Hm_lvt_010e9ef9290225e88b64ebf20166c8c4=1555483336,1555483969,1555485589,1555659482; Hm_lpvt_010e9ef9290225e88b64ebf20166c8c4=1555659897");
-            post.setHeader("Referer", "https://hanyu.baidu.com/s?wd=%E4%BA%94%E8%A1%8C%E5%B1%9E%E6%B0%B4%E7%9A%84%E5%AD%97&from=poem");
-            post.setHeader("Host", "hanyu.baidu.com");
-            post.setHeader("Accept", "application/json, text/javascript, */*; q=0.01");
-            post.setHeader("Accept-Encoding", "gzip, deflate, br");
-            post.setHeader("Accept-Language", "zh-CN,zh;q=0.9");
-            post.setHeader("Connection", "keep-alive");
-            post.setHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36");
-            post.setHeader("X-Requested-With", "zh-CN,zh;q=0.9");
-
-
-            if (entity != null) {
-                //post.setEntity(entity);
-            }
+            requestBase.setURI(new URI(url));
             // 设置参数
             RequestConfig.Builder customReqConf = RequestConfig.custom();
             customReqConf.setConnectTimeout(connTimeout);
             customReqConf.setSocketTimeout(readTimeout);
-            post.setConfig(customReqConf.build());
+            requestBase.setConfig(customReqConf.build());
 
             HttpResponse res;
             if (url.startsWith("https")) {
                 // 执行 Https 请求.
                 client = createSSLInsecureClient();
 
-                res = client.execute(post);
+                res = client.execute(requestBase);
 
             } else {
                 // 执行 Http 请求.
                 client = HttpClientUtil.getHttpClient();
-                res = client.execute(post);
+                res = client.execute(requestBase);
             }
 
             result = IOUtils.toString(res.getEntity().getContent(), charset);
@@ -173,7 +157,7 @@ public class HttpClientUtil {
         }catch (Exception e){
             e.printStackTrace();
         }finally {
-            post.releaseConnection();
+            requestBase.releaseConnection();
             if (url.startsWith("https") && client != null&& client instanceof CloseableHttpClient) {
                 try {
                     ((CloseableHttpClient) client).close();
