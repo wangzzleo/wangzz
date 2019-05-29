@@ -4,20 +4,42 @@ import com.wangzz.exception.XMLConvertException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.management.modelmbean.XMLParseException;
 import javax.xml.bind.JAXB;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Marshaller;
 import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.math.BigDecimal;
-import java.math.MathContext;
 import java.util.*;
 
 public class JAXBUtil {
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlRootElement(name = "STATUS")
+    public static class CommonResponseStatus {
+        /**
+         * 处理结果码
+         * 0表示正常，其余均为异常
+         */
+        @XmlElement(name = "CODE")
+        private String code;
+
+        /**
+         * 处理结果等级(INFO/WARN/ERROR)
+         */
+        @XmlElement(name = "SEVERITY")
+        private String severity;
+
+        /**
+         * 信息描述
+         */
+        @XmlElement(name = "MESSAGE")
+        private String message;
+    }
+
+
     public static void main(String[] args) throws Exception {
         String xmlStr = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n" +
                 "<USER>\n" +
@@ -33,9 +55,9 @@ public class JAXBUtil {
         User.Test test = new User.Test();
         test.setTest("asdfsdf");
         map.add(test);
-        User user = new User(new CommonResponseStatus("1", "2", "3"), 1,"宙哥", new BigDecimal(1.01).setScale(2, BigDecimal.ROUND_DOWN), strings,new Date(), test);
+        User user = new User(new CommonResponseStatus("1", "2", "3"), 1,"宙哥", new BigDecimal(1.01).setScale(2, BigDecimal.ROUND_DOWN), strings,new Date(), null);
         //JAXB.marshal(user, System.out);
-        //User user = convertXmlToJavaBean(User.class, xmlStr);
+        User user1 = convertXmlToJavaBean(User.class, xmlStr);
         System.out.println(convertJavabeanToXml(user));
     }
 
@@ -79,11 +101,11 @@ public class JAXBUtil {
         @XmlElement(name = "BALLLL")
         private BigDecimal balance;
 
-        @XmlElementWrapper(name = "cars")
-        @XmlElement(name = "car")
+       // @XmlElementWrapper(name = "CARSS")
+        @XmlElement(name = "CAR")
         private List<String> cars;
 
-        @XmlJavaTypeAdapter(JaxbDateAdapter.ONLY_DATE_FORMAT.class)
+        //@XmlJavaTypeAdapter(JaxbDateAdapter.ONLY_DATE_FORMAT.class)
         @XmlElement(name = "BIRTH")
         private Date birthday;
 
@@ -100,20 +122,5 @@ public class JAXBUtil {
         }
     }
 
-    @Data
-    @NoArgsConstructor
-    @AllArgsConstructor
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlRootElement(name = "STATUS")
-    public static class CommonResponseStatus {
-        @XmlElement(name = "MESSAGE")
-        private String code;
-
-        @XmlElement(name = "SEVERITY")
-        private String severity;
-
-        @XmlElement(name = "MESSAGE")
-        private String message;
-    }
 
 }
