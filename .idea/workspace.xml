@@ -5,21 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29949af2-ad4e-41bf-b82b-e5f67cc11b07" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/wangzz/string/Hex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/wangzz/string/Receipt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/string/Hex.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/string/InfiniteRecursion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/string/InternDemo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/string/Receipt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/string/RuntimeConstantPoolOOM.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/string/StringInternDemo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JaxbDateAdapter$NoMSStandardDateFormat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JaxbDateAdapter$OnlyDateFormat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JaxbDateAdapter$StandardDateFormat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JaxbDateAdapter$UnderlineDateFormat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/string/Hex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/string/InfiniteRecursion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/string/InternDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/string/Receipt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/string/RuntimeConstantPoolOOM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/string/StringInternDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/wangzz/string/InfiniteRecursion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/wangzz/string/InternDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/wangzz/string/RuntimeConstantPoolOOM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/wangzz/string/StringInternDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JAXBUtil$CommonResponseStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JAXBUtil$CommonResponseStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JAXBUtil$User$Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JAXBUtil$User$Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JAXBUtil$User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JAXBUtil$User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JAXBUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JAXBUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JaxbDateAdapter$ONLY_DATE_FORMAT.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JaxbDateAdapter$STANDARM_DATE_FORMAT.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JaxbDateAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/com/wangzz/xml/JaxbDateAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/xml/JAXBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/xml/JAXBUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/xml/JaxbDateAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wangzz/src/com/wangzz/xml/JaxbDateAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wangzz/xml/JAXBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wangzz/xml/JAXBUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wangzz/xml/JaxbDateAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wangzz/xml/JaxbDateAdapter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +39,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/wangzz/string/RuntimeConstantPoolOOM.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
@@ -41,18 +47,6 @@
               <folding>
                 <element signature="e#171#172#0" expanded="true" />
                 <element signature="e#214#215#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/wangzz/string/InfiniteRecursion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/wangzz/string/Hex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="325">
+              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -264,36 +258,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wangzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -457,7 +421,8 @@
       <workItem from="1558661955980" duration="5781000" />
       <workItem from="1558920812987" duration="6743000" />
       <workItem from="1559004168128" duration="1390000" />
-      <workItem from="1559090643443" duration="794000" />
+      <workItem from="1559090643443" duration="2031000" />
+      <workItem from="1559176980757" duration="1215000" />
     </task>
     <task id="LOCAL-00001" summary="baidu spider">
       <created>1555665896717</created>
@@ -494,17 +459,23 @@
       <option name="project" value="LOCAL" />
       <updated>1556270636647</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="一些学习demo">
+      <created>1559100700774</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1559100700774</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172286000" />
+    <option name="totallyTimeSpent" value="174738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.27801725" visible="true" weight="0.272197" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.27801725" visible="true" weight="0.27673364" />
       <window_info id="Structure" order="1" sideWeight="0.7219828" side_tool="true" weight="0.26312378" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -566,7 +537,8 @@
     <MESSAGE value="baidu spider" />
     <MESSAGE value="SAXB 学习记录！ 内容参考：https://blog.csdn.net/wn084/article/details/80853587" />
     <MESSAGE value="SAXB 学习记录2！ 内容参考：https://blog.csdn.net/wn084/article/details/80853587" />
-    <option name="LAST_COMMIT_MESSAGE" value="SAXB 学习记录2！ 内容参考：https://blog.csdn.net/wn084/article/details/80853587" />
+    <MESSAGE value="一些学习demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="一些学习demo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -832,27 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/wangzz/string/RuntimeConstantPoolOOM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          <folding>
-            <element signature="e#171#172#0" expanded="true" />
-            <element signature="e#214#215#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/wangzz/string/InfiniteRecursion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/wangzz/string/Receipt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -901,10 +852,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/wangzz/string/Hex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="325">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wangzz/string/InfiniteRecursion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wangzz/string/RuntimeConstantPoolOOM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding>
+            <element signature="e#171#172#0" expanded="true" />
+            <element signature="e#214#215#0" expanded="true" />
           </folding>
         </state>
       </provider>
