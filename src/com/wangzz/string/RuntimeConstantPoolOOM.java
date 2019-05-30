@@ -10,6 +10,10 @@ public class RuntimeConstantPoolOOM {
 
     public static void main(String[] args) {
         System.out.println(s1 + s2);
+        System.out.println(s1 + s2);
+        System.out.println(s1 + s2);
+        System.out.println(s1 + s2);
+        System.out.println(s1 + s2);
     }
 
 
