@@ -8,7 +8,7 @@
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;characterEncoding=UTF-8"/>
+                <property name="url" value="jdbc:mysql://127.0.0.1:3306/github?useUnicode=true&amp;characterEncoding=UTF-8"/>
                 <property name="username" value="root"/>
                 <property name="password" value="12345678"/>
             </dataSource>
@@ -16,5 +16,6 @@
     </environments>
     <mappers>
         <mapper resource="resources\test\BlogMapper.xml"/>
+        <mapper resource="resources\test\GithubCompanyInfoMapper.xml"/>
     </mappers>
 </configuration>

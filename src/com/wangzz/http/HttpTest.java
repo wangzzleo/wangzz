@@ -3,6 +3,7 @@ package com.wangzz.http;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import com.wangzz.dictionary.Name;
 import com.wangzz.dictionary.NameScore;
 import com.wangzz.xml.HTML;
@@ -10,16 +11,66 @@ import com.wangzz.xml.HTMLUtil;
 import org.apache.commons.lang.StringUtils;
 import org.apache.http.Header;
 import org.apache.http.HeaderElement;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.protocol.HttpClientContext;
+import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicHeaderElement;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.protocol.HttpContext;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.*;
 
 public class HttpTest {
     public static void main(String[] args) {
+
+
+        ThreadFactory threadFactory = new ThreadFactoryBuilder().setNameFormat("demo-pool-%d").build();
+        ExecutorService service = new ThreadPoolExecutor(10, 10, 1000, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(), threadFactory);
+
+
+    }
+
+    static class GetThread extends Thread {
+
+        private final CloseableHttpClient httpClient;
+        private final HttpContext context;
+        private final HttpGet httpget;
+
+        public GetThread(CloseableHttpClient httpClient, HttpGet httpget) {
+            this.httpClient = httpClient;
+            this.context = HttpClientContext.create();
+            this.httpget = httpget;
+        }
+
+        @Override
+        public void run() {
+            try {
+                CloseableHttpResponse response = httpClient.execute(
+                        httpget, context);
+                try {
+                    HttpEntity entity = response.getEntity();
+                } finally {
+                    response.close();
+                }
+            } catch (ClientProtocolException ex) {
+                // Handle protocol errors
+            } catch (IOException ex) {
+                // Handle I/O errors
+            }
+        }
+
+    }
+
+
+    private void createName() {
         int i = 1;
         while (true) {
             String url = "https://hanyu.baidu.com/hanyu/ajax/search_list?wd=%E5%B8%A6%E5%A5%B3&device=pc&from=home&userid=238816338&pn=" + (++i) +"&_=1555914238360";
@@ -54,7 +105,4 @@ public class HttpTest {
         }
         //System.out.println(retArray);
     }
-
-
-
 }
