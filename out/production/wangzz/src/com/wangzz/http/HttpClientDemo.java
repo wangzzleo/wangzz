@@ -41,6 +41,7 @@ public class HttpClientDemo {
     private void testGet() {
         CloseableHttpResponse response1 = null;
         try {
+            // URIBuilder 实用类来简化请求 URL的创建和修改.
             URI uri = new URIBuilder()
                     .setScheme("https")
                     .setHost("www.baidu.com")

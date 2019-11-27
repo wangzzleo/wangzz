@@ -4,7 +4,23 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wangzz.mybatisLearn.mapper.BlogMapper">
 
+    <resultMap id="blogResult" type="com.wangzz.mybatisLearn.bean.Blog">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="page" jdbcType="INTEGER" property="page"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+    </resultMap>
+
     <select id="selectBlog" resultType="com.wangzz.mybatisLearn.bean.Blog">
         select * from Blog where id = #{id}
     </select>
+
+    <select id="selectAllBlog" resultMap="blogResult">
+        select MIN(id) as id ,name,title,page,status from Blog where id = 123123123123
+    </select>
+
+    <insert id="insert" parameterType="com.wangzz.mybatisLearn.bean.Blog" useGeneratedKeys="true" keyProperty="id">
+        insert into blog (name,title,page,status) values (#{name},#{title},#{page},#{status})
+    </insert>
 </mapper>

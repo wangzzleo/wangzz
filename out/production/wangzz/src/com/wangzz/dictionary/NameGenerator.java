@@ -1,9 +1,6 @@
 package com.wangzz.dictionary;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -27,7 +24,7 @@ public class NameGenerator implements Runnable {
     public void run() {
         //"C:\\Users\\user\\Desktop\\现代汉语词典.txt"
         File file = new File(inputFilePath);
-        try(BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));) {
+        try(BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
             List<String> dictionary = new ArrayList<>();
             while (bufferedReader.ready()) {
                 String s = bufferedReader.readLine();
@@ -39,7 +36,6 @@ public class NameGenerator implements Runnable {
             int i = 0;
             while (true) {
                 StringBuilder nameString = new StringBuilder();
-
                 random.ints(2, 0, dictionary.size()).
                         forEach((j) -> {
                             String partName = dictionary.get(j);

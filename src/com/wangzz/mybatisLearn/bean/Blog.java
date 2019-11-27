@@ -6,5 +6,8 @@ import lombok.Data;
 public class Blog {
     private int id;
     private String name;
+    private String title;
+    private int page;
+    private int status;
 
 }

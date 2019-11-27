@@ -81,12 +81,11 @@ public class HttpClientUtil {
     }
 
     public static CloseableHttpClient getHttpClient() {
-        CloseableHttpClient httpClient = HttpClients.custom()
-                .setConnectionManager(cm)
-                .build();
 
         /*CloseableHttpClient httpClient = HttpClients.createDefault();//如果不采用连接池就是这种方式获取连接*/
-        return httpClient;
+        return HttpClients.custom()
+                .setConnectionManager(cm)
+                .build();
     }
 
     public static String sendPostSSLRequest(String url, Header[] headers, List<BasicNameValuePair> pairList, String charset, String mimeType){
@@ -135,9 +134,7 @@ public class HttpClientUtil {
             if (url.startsWith("https")) {
                 // 执行 Https 请求.
                 client = createSSLInsecureClient();
-
                 res = client.execute(requestBase);
-
             } else {
                 // 执行 Http 请求.
                 client = HttpClientUtil.getHttpClient();

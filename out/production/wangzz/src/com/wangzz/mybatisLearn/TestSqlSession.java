@@ -10,23 +10,50 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.File;
 import java.io.InputStream;
+import java.util.List;
+import java.util.Optional;
 
 public class TestSqlSession {
-    public static void main(String args) throws Exception {
+    public static void main(String[] args) throws Exception {
         //从各种类加载器的路径下找文件
-//        InputStream res = Resources.getResourceAsStream("resources/mybatis-config.xml");
-//        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(res);
-//        SqlSession sqlSession = sqlSessionFactory.openSession();
-//        try {
-//            BlogMapper mapper = sqlSession.getMapper(BlogMapper.class);
+        InputStream res = Resources.getResourceAsStream("resources/mybatis-config.xml");
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(res);
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        try {
+            BlogMapper mapper = sqlSession.getMapper(BlogMapper.class);
+//            List<Blog> blogs = mapper.selectAllBlog();
+//            System.out.println(blogs);
+//            System.out.println(blogs.size());
 //            Blog blog = mapper.selectBlog(1).orElseThrow(() -> new IllegalArgumentException("不存在！"));
 //            System.out.println(blog);
-//        } finally {
-//            sqlSession.close();
-//        }
+
+//            System.out.println("====================================================================================================100%");
+//            for (int i = 1000000; i < 2000000; i++) {
+//                Blog blog = new Blog();
+//                blog.setName("blog"+i);
+//                blog.setPage(i);
+//                blog.setStatus(i%2);
+//                mapper.insert(blog);
+//                if (i%10000==0) {
+//                    System.out.print("=");
+//                }
+//            }
+//            Blog blog = new Blog();
+//            blog.setName("blog123123");
+//            blog.setPage(1223);
+//            blog.setStatus(1);
+//            mapper.insert(blog);
+//
+//            sqlSession.commit();
+
+            List<Blog> blogs = mapper.selectAllBlog();
+            System.out.println(blogs);
+        } finally {
+            sqlSession.close();
+        }
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String args) throws Exception {
         //从各种类加载器的路径下找文件
         InputStream res = Resources.getResourceAsStream("resources/mybatis-config.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(res);
