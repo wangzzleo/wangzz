@@ -14,6 +14,11 @@ import java.util.List;
 import java.util.Optional;
 
 public class TestSqlSession {
+
+    static {
+        System.out.println("TestSqlSession static block");
+    }
+
     public static void main(String[] args) throws Exception {
         //从各种类加载器的路径下找文件
         InputStream res = Resources.getResourceAsStream("resources/mybatis-config.xml");
