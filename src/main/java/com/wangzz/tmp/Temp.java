@@ -1,5 +1,10 @@
 package com.wangzz.tmp;
 
+import com.alibaba.fastjson.JSON;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 public class Temp {
 
 //    public static void main(String[] args) {
@@ -391,19 +396,34 @@ public class Temp {
 //        }
 //    }
 
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
+    static class DingDingMarkDownMsg {
+        private String msgtype;
+        private String markdown;
+        private String at;
+    }
+
+
     public static void main(String[] args) {
 
-        System.out.println("aaa");
+        int a = 1;
+        a |= 0;
 
-        loop:
-        while (true) {
-            System.out.println("bbb");
-
-            while (true) {
-                System.out.println("ccc");
-                continue loop;
-            }
-        }
+        a = a|0;
+        System.out.println(a);
+//        System.out.println("aaa");
+//
+//        loop:
+//        while (true) {
+//            System.out.println("bbb");
+//
+//            while (true) {
+//                System.out.println("ccc");
+//                continue loop;
+//            }
+//        }
        // System.out.println("ddd");
 
     }

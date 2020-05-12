@@ -14,17 +14,19 @@ public class TestJDKDynamicProxy {
 
     public static void main(String[] args) {
         Hello hello = (Hello)Proxy.newProxyInstance(Hello.class.getClassLoader(), new Class[]{Hello.class}, new HelloInvocationHandler(new MyHello()));
-        hello.hashCode();
+        int b = hello.sayHello();
+        System.out.println(b);
     }
 
     static interface Hello {
-        void sayHello();
+        int sayHello();
     }
 
     static class MyHello implements Hello {
         @Override
-        public void sayHello() {
+        public int sayHello() {
             System.out.println("MyHello say hello!");
+            return 1;
         }
     }
 

@@ -21,7 +21,7 @@ public class TestSqlSession {
 
     public static void main(String[] args) throws Exception {
         //从各种类加载器的路径下找文件
-        InputStream res = Resources.getResourceAsStream("resources/mybatis-config.xml");
+        InputStream res = Resources.getResourceAsStream("mybatis-config.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(res);
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
@@ -64,7 +64,7 @@ public class TestSqlSession {
 
     public static void main(String args) throws Exception {
         //从各种类加载器的路径下找文件
-        InputStream res = Resources.getResourceAsStream("resources/mybatis-config.xml");
+        InputStream res = Resources.getResourceAsStream("mybatis-config.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(res);
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
