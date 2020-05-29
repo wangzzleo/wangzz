@@ -43,19 +43,21 @@ public class TestSqlSession {
 //                    System.out.print("=");
 //                }
 //            }
-//            Blog blog = new Blog();
-//            blog.setName("blog123123");
-//            blog.setPage(1223);
-//            blog.setStatus(1);
-//            mapper.insert(blog);
+            Blog blog = new Blog();
+            blog.setName("blog123123");
+            blog.setTitle("myblog");
+            blog.setPage(1223);
+            blog.setStatus(1);
+            int insert = mapper.insert(blog);
+            System.out.println(blog.getId());
 //
-//            sqlSession.commit();
+            sqlSession.commit();
 
-            Optional<Blog> blog = mapper.selectBlog(99999999);
-            System.out.println(blog.isPresent() ? blog.get() : "不存在");
+            //Optional<Blog> blog = mapper.selectBlog(99999999);
+            //System.out.println(blog.isPresent() ? blog.get() : "不存在");
 
-            List<Blog> blogs = mapper.selectAllBlog();
-            System.out.println(blogs);
+            //List<Blog> blogs = mapper.selectAllBlog();
+            //System.out.println(blogs);
         } finally {
             sqlSession.close();
         }

@@ -407,12 +407,9 @@ public class Temp {
 
 
     public static void main(String[] args) {
-
-        int a = 1;
-        a |= 0;
-
-        a = a|0;
-        System.out.println(a);
+        InnerClass innerClass = new InnerClass();
+        InnerClass.InnerSubClass innerSubClass = innerClass.new InnerSubClass();
+        new InnerClass.InnerStaticSubClass();
 //        System.out.println("aaa");
 //
 //        loop:

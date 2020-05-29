@@ -27,7 +27,7 @@
         select id ,name,title,page,status from Blog where id in(123123123123,123123123125,123123123124)
     </select>
 
-    <insert id="insert" parameterType="com.wangzz.mybatisLearn.bean.Blog" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insert" parameterType="com.wangzz.mybatisLearn.bean.Blog" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
         insert into blog (name,title,page,status) values (#{name},#{title},#{page},#{status})
     </insert>
 </mapper>
