@@ -12,6 +12,7 @@ import org.redisson.config.Config;
 
 import java.io.InputStream;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 public class RedissonTest {
 
@@ -75,16 +76,17 @@ public class RedissonTest {
     }
 
     @Test
-    public void testTryLock() {
+    public void testTryLock() throws Exception {
         RLock wangzz_test = redisson.getLock("wangzz_test");
-        if (wangzz_test.tryLock()) {
+        if (wangzz_test.tryLock(0, 1, TimeUnit.SECONDS)) {
             System.out.println("加锁成功");
             try {
-                Thread.sleep(20000);
+                Thread.sleep(2500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } finally {
                 wangzz_test.unlock();
+                System.out.println("解锁了");
             }
         }
 
