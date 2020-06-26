@@ -1,7 +1,5 @@
 package com.wangzz.dictionary;
 
-import com.wangzz.http.HttpClientUtil;
-
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.concurrent.ArrayBlockingQueue;

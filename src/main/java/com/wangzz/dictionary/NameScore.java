@@ -1,6 +1,6 @@
 package com.wangzz.dictionary;
 
-import com.wangzz.http.HttpClientUtil;
+import com.wangzz.net.http.HttpClientUtil;
 import com.wangzz.xml.HTMLUtil;
 import org.apache.http.message.BasicNameValuePair;
 
