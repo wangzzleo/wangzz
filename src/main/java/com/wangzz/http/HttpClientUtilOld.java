@@ -323,6 +323,7 @@ public class HttpClientUtilOld {
         try {
             // 设置参数
             RequestConfig.Builder customReqConf = RequestConfig.custom();
+            customReqConf.setConnectionRequestTimeout(1000);
             customReqConf.setConnectTimeout(connTimeout);
             customReqConf.setSocketTimeout(readTimeout);
             get.setConfig(customReqConf.build());
