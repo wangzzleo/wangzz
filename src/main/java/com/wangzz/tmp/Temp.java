@@ -407,9 +407,9 @@ public class Temp {
 
 
     public static void main(String[] args) {
-        InnerClass innerClass = new InnerClass();
-        InnerClass.InnerSubClass innerSubClass = innerClass.new InnerSubClass();
-        new InnerClass.InnerStaticSubClass();
+//        InnerClass innerClass = new InnerClass();
+//        InnerClass.InnerSubClass innerSubClass = innerClass.new InnerSubClass();
+//        new InnerClass.InnerStaticSubClass();
 //        System.out.println("aaa");
 //
 //        loop:

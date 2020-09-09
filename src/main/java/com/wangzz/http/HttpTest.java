@@ -19,6 +19,7 @@ import org.apache.http.protocol.HttpContext;
 import java.io.IOException;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.net.SocketTimeoutException;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.concurrent.*;
@@ -34,142 +35,181 @@ public class HttpTest {
 
 //        for (String cardNo:strings) {
 //            service.execute(() -> {
-                String s = HttpClientUtilOld.get("https://ccdcapi.alipay.com/validateAndCacheCardInfo.json?cardNo=" + "&cardBinCheck=true");
-                Map map = JSON.parseObject(s, Map.class);
-                System.out.println(map.get("bank"));
+        String s = HttpClientUtilOld.get("https://ccdcapi.alipay.com/validateAndCacheCardInfo.json?cardNo=" + "&cardBinCheck=true");
+        Map map = JSON.parseObject(s, Map.class);
+        System.out.println(map.get("bank"));
 //            });
 //        }
 
-        while (service.isTerminated()) {
-            return;
-        }
-
-    }
-
-    static class GetThread extends Thread {
-
-        private final CloseableHttpClient httpClient;
-        private final HttpContext context;
-        private final HttpGet httpget;
-
-        public GetThread(CloseableHttpClient httpClient, HttpGet httpget) {
-            this.httpClient = httpClient;
-            this.context = HttpClientContext.create();
-            this.httpget = httpget;
-        }
-
-        @Override
-        public void run() {
+//        while (service.isTerminated()) {
+//            return;
+//
+//
+//        ThreadFactory threadFactory = new ThreadFactoryBuilder().setNameFormat("demo-pool-%d").build();
+//        ExecutorService service = new ThreadPoolExecutor(10, 10, 1000, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(), threadFactory);
+//
+//
+//        for (int i = 0; i < 800; i++) {
+//            PaymentOrderDTO paymentOrderDTO = new PaymentOrderDTO();
+//            if (i%3 == 1) {
+//                paymentOrderDTO.setCustAccount("11010219721601");
+//                paymentOrderDTO.setAccountName("平安测试六零零零三四一五八六二六");
+//            } else if (i%3 == 2) {
+//                paymentOrderDTO.setCustAccount("6230580000054508325");
+//                paymentOrderDTO.setAccountName("平安测试七八八零六");
+//            } else {
+//                paymentOrderDTO.setCustAccount("6230580000074308748");
+//                paymentOrderDTO.setAccountName("平安测试三四六五九");
+//            }
+//            paymentOrderDTO.setContractId("CH2019101088" + i);
+//            Runnable httpClientTestThread = new HttpClientTestThread(paymentOrderDTO);
+//            service.execute(httpClientTestThread);
+//        }
+//
+//        while (service.isTerminated()) {
+//            return;
+//        }
+            String url = "https://www.baidu.com";
             try {
-                CloseableHttpResponse response = httpClient.execute(
-                        httpget, context);
-                try {
-                    HttpEntity entity = response.getEntity();
-                } finally {
-                    response.close();
-                }
-            } catch (ClientProtocolException ex) {
-                // Handle protocol errors
-            } catch (IOException ex) {
-                // Handle I/O errors
-            }
-        }
-
-    }
-
-    static class HttpClientTestThread extends Thread {
-
-        private PaymentOrderDTO dto;
-
-        public HttpClientTestThread(PaymentOrderDTO dto) {
-            this.dto =dto;
-        }
-
-        public static int nextInt(final int startInclusive, final int endExclusive) {
-            if (startInclusive == endExclusive) {
-                return startInclusive;
-            }
-            Random RANDOM = new Random();
-
-            return startInclusive + RANDOM.nextInt(endExclusive - startInclusive);
-        }
-
-        @Override
-        public void run() {
-            try {
-                String callFlow = LocalDate.now().toString().replace("-", "") + System.nanoTime() + String.format("%04d", nextInt(0, 9999));;
-                //String url = "http://localhost:8083/pay/api/sendPayment?"+ "sceneId=10000212&providerId=10050021&paymentMode=2&bankName=兴业银行&custAccount="+dto.getCustAccount()+"&accountName="+dto.getAccountName()+"&paymentAmount=1&flowStatus=true&certType=1&certNo="+dto.getCertNo()+"&callFlow="+callFlow;
-                String url = "http://localhost:8083/pay/api/sendPayment?"+ "sceneId=10000212&providerId=10050021&paymentMode=1&bankName=平安银行&custAccount="+dto.getCustAccount()+"&accountName="+dto.getAccountName()+"&paymentAmount=1&flowStatus=true&contractId=" + dto.getContractId() + "&effectStartDate=2019-09-23&effectEndDate=2020-10-23&callFlow="+callFlow;
-                String url1 = "http://localhost:8083/pay/api/sendPayment?"+ "sceneId=10000210&providerId=10050007&paymentMode=1&bankName=平安银行股份有限公司上海九江路支行&custAccount=123455555&accountName=平安银行测试2222&paymentAmount=1&flowStatus=true&bankCode=307290023031&callFlow="+callFlow;
-                String res = HttpClientUtilOld.sendPostSSLRequest(url , null,"UTF-8", "application/x-www-form-urlencoded");
+                String res = HttpClientUtilOld.sendGetSSLRequest(url, "UTF-8");
                 System.out.println(res);
-            }  catch (Exception ex) {
-                ex.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
+//        }
+        String url1 = "https://www.baidu.com";
+        try {
+            String res = HttpClientUtilOld.sendGetSSLRequest(url1 ,"UTF-8");
+            System.out.println(res);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+        class GetThread extends Thread {
+
+            private final CloseableHttpClient httpClient;
+            private final HttpContext context;
+            private final HttpGet httpget;
+
+            public GetThread(CloseableHttpClient httpClient, HttpGet httpget) {
+                this.httpClient = httpClient;
+                this.context = HttpClientContext.create();
+                this.httpget = httpget;
+            }
+
+            @Override
+            public void run() {
+                try {
+                    CloseableHttpResponse response = httpClient.execute(
+                            httpget, context);
+                    try {
+                        HttpEntity entity = response.getEntity();
+                    } finally {
+                        response.close();
+                    }
+                } catch (ClientProtocolException ex) {
+                    // Handle protocol errors
+                } catch (IOException ex) {
+                    // Handle I/O errors
+                }
+            }
+
         }
 
-    }
+        class HttpClientTestThread extends Thread {
+
+            private com.wangzz.net.http.HttpTest.PaymentOrderDTO dto;
+
+            public HttpClientTestThread(com.wangzz.net.http.HttpTest.PaymentOrderDTO dto) {
+                this.dto = dto;
+            }
+
+            public int nextInt(final int startInclusive, final int endExclusive) {
+                if (startInclusive == endExclusive) {
+                    return startInclusive;
+                }
+                Random RANDOM = new Random();
+
+                return startInclusive + RANDOM.nextInt(endExclusive - startInclusive);
+            }
+
+            @Override
+            public void run() {
+                try {
+                    String callFlow = LocalDate.now().toString().replace("-", "") + System.nanoTime() + String.format("%04d", nextInt(0, 9999));
+                    ;
+                    //String url = "http://localhost:8083/pay/api/sendPayment?"+ "sceneId=10000212&providerId=10050021&paymentMode=2&bankName=兴业银行&custAccount="+dto.getCustAccount()+"&accountName="+dto.getAccountName()+"&paymentAmount=1&flowStatus=true&certType=1&certNo="+dto.getCertNo()+"&callFlow="+callFlow;
+                    String url = "http://localhost:8083/pay/api/sendPayment?" + "sceneId=10000212&providerId=10050021&paymentMode=1&bankName=平安银行&custAccount=" + dto.getCustAccount() + "&accountName=" + dto.getAccountName() + "&paymentAmount=1&flowStatus=true&contractId=" + dto.getContractId() + "&effectStartDate=2019-09-23&effectEndDate=2020-10-23&callFlow=" + callFlow;
+                    String url1 = "http://localhost:8083/pay/api/sendPayment?" + "sceneId=10000210&providerId=10050007&paymentMode=1&bankName=平安银行股份有限公司上海九江路支行&custAccount=123455555&accountName=平安银行测试2222&paymentAmount=1&flowStatus=true&bankCode=307290023031&callFlow=" + callFlow;
+                    String res = HttpClientUtilOld.sendPostSSLRequest(url, null, "UTF-8", "application/x-www-form-urlencoded");
+                    System.out.println(res);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+
+        }
 
 
-    @Data
-    static class PaymentOrderDTO implements Serializable {
-        /**必填     唯一支付指令流水(上游流水号、订单号)*/
-        private String callFlow;
-        /**必填   外部系统订单号   */
-        private String outOrderNo;
-        /**必填  支付方式 1:代付(放款)，2:代收(回款)*/
-        private Integer paymentMode;
-        /**必填  申请单号、贷款编号   */
-        private Long applyId;
-        /**必填  场景ID*/
-        private Integer sceneId;
-        /**必填  资金(信托项目)ID*/
-        private Integer fundsId;
-        /**必填  资金来源(方)ID*/
-        private Integer providerId;
-        /**必填  产品ID */
-        private Integer productId;
-        /**必填  商户编号、供应商id*/
-        private String merchantNo;
-        /**必填  证件类型: 1身份证、2签证、3护照、4户口本、5港澳通行证、7党员证、6军人证、7团员证、8居住证*/
-        private Integer certType;
-        /**可选  证件号码  */
-        private String certNo;
-        /**必填  客户账户名称 */
-        private String accountName;
-        /**可选  客户账户，银行卡或第三方账号 */
-        private String custAccount;
-        /**必填 手机号  */
-        private String mobile;
-        /**必填 流程状态，是否请求第三方。1需要调用第三方支付，0:不用调用第三方，先有第三方结果，反向生成支付数据 */
-        private Boolean flowStatus;
-        /**可选  银行名称 */
-        private String bankName;
-        /**可选  银行编码 */
-        private String bankCode;
-        /**必填  订单日期(下单时间) yyyy-MM-dd HH:mm:ss */
-        private String orderDate;
-        /**必填  付款(扣款)金额*/
-        private BigDecimal paymentAmount;
-        /**可选   第三方支付回调时间，支付时间 yyyy-MM-dd HH:mm:ss*/
-        private String paymentTime;
-        /**可选  支付状态 0等待处理 1支付中 2支付成功 3支付失败 */
-        private Integer paymentStatus;
-        /**必填  房互网--国投-宝付用户签约协议号 */
-        private String protocolNo;
-        /**必填  房互网-国投-宝付用户id */
-        private String userId;
-        /**可选  兴业银行-期数 */
-        private Integer term;
-        /**必填  对公对私标志- 账务推送: 2-对公  1-对私*/
-        private Integer pubOrpriFlag;
-        /**托管户直放-必填  合同编号 */
-        private String contractId;
-        /**生效开始日 yyyy-MM-dd*/
-        private String effectStartDate;
-        /**生效结束日 yyyy-MM-dd*/
-        private String effectEndDate;
-    }
+        @Data
+        class PaymentOrderDTO implements Serializable {
+            /**必填     唯一支付指令流水(上游流水号、订单号)*/
+            private String callFlow;
+            /**必填   外部系统订单号   */
+            private String outOrderNo;
+            /**必填  支付方式 1:代付(放款)，2:代收(回款)*/
+            private Integer paymentMode;
+            /**必填  申请单号、贷款编号   */
+            private Long applyId;
+            /**必填  场景ID*/
+            private Integer sceneId;
+            /**必填  资金(信托项目)ID*/
+            private Integer fundsId;
+            /**必填  资金来源(方)ID*/
+            private Integer providerId;
+            /**必填  产品ID */
+            private Integer productId;
+            /**必填  商户编号、供应商id*/
+            private String merchantNo;
+            /**必填  证件类型: 1身份证、2签证、3护照、4户口本、5港澳通行证、7党员证、6军人证、7团员证、8居住证*/
+            private Integer certType;
+            /**可选  证件号码  */
+            private String certNo;
+            /**必填  客户账户名称 */
+            private String accountName;
+            /**可选  客户账户，银行卡或第三方账号 */
+            private String custAccount;
+            /**必填 手机号  */
+            private String mobile;
+            /**必填 流程状态，是否请求第三方。1需要调用第三方支付，0:不用调用第三方，先有第三方结果，反向生成支付数据 */
+            private Boolean flowStatus;
+            /**可选  银行名称 */
+            private String bankName;
+            /**可选  银行编码 */
+            private String bankCode;
+            /**必填  订单日期(下单时间) yyyy-MM-dd HH:mm:ss */
+            private String orderDate;
+            /**必填  付款(扣款)金额*/
+            private BigDecimal paymentAmount;
+            /**可选   第三方支付回调时间，支付时间 yyyy-MM-dd HH:mm:ss*/
+            private String paymentTime;
+            /**可选  支付状态 0等待处理 1支付中 2支付成功 3支付失败 */
+            private Integer paymentStatus;
+            /**必填  房互网--国投-宝付用户签约协议号 */
+            private String protocolNo;
+            /**必填  房互网-国投-宝付用户id */
+            private String userId;
+            /**可选  兴业银行-期数 */
+            private Integer term;
+            /**必填  对公对私标志- 账务推送: 2-对公  1-对私*/
+            private Integer pubOrpriFlag;
+            /**托管户直放-必填  合同编号 */
+            private String contractId;
+            /**生效开始日 yyyy-MM-dd*/
+            private String effectStartDate;
+            /**生效结束日 yyyy-MM-dd*/
+            private String effectEndDate;
+        }
 
     private void createName() {
         int i = 1;

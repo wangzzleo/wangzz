@@ -123,7 +123,7 @@ public class HttpTest {
 
 
     @Data
-    static class PaymentOrderDTO implements Serializable {
+    public static class PaymentOrderDTO implements Serializable {
         /**必填     唯一支付指令流水(上游流水号、订单号)*/
         private String callFlow;
         /**必填   外部系统订单号   */
