@@ -7,9 +7,18 @@ package com.wangzz.struct.search;
 public class BinarySearch {
 
     public static void main(String[] args) {
-//        System.out.println(binarySearch(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 11}, 2));
-        System.out.println(sqrt(2, 10));
-        System.out.println(Math.pow(10, -10));
+        System.out.println(binarySearch(new int[]{1, 2}, 2));
+//        System.out.println(sqrt(2, 10));
+//        System.out.println(Math.pow(10, -10));
+
+        try {
+            Thread.currentThread().join();
+        } catch (InterruptedException e) {
+            System.err.println("exception");
+        }finally {
+            System.out.println("running finally");
+        }
+
     }
 
     public static int binarySearch(int[] arr, int target) {
@@ -19,13 +28,13 @@ public class BinarySearch {
         int left = 0;
         int right = arr.length - 1;
         while (left <= right) {
-            int middle = right / 2;
+            int middle = (left + right) / 2;
             if (target == arr[middle]) {
                 return middle;
-            } else if (target > arr[middle]) {
-                left = middle;
+            } else if (arr[middle] < target) {
+                left = middle + 1;
             } else if (target < arr[middle]) {
-                right = middle;
+                right = middle - 1;
             }
         }
         return -1;

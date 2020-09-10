@@ -8,7 +8,8 @@ public class ThreadPoolTest {
 
     public static void main(String[] args) {
         try {
-            ThreadPoolExecutor threadPoolExecutor =  new ThreadPoolExecutor(2,2,1, TimeUnit.SECONDS, new LinkedBlockingQueue<>(1)) {
+            ThreadPoolExecutor threadPoolExecutor =  new ThreadPoolExecutor(2,5,10,
+                    TimeUnit.SECONDS, new LinkedBlockingQueue<>(1)) {
 
                 void onShutdown() {
 
@@ -61,12 +62,20 @@ public class ThreadPoolTest {
 //            } catch (Exception e) {
 //                e.printStackTrace();
 //            }
-            Thread.sleep(5000);
-            System.out.println("线程状态：" + threadPoolExecutor.toString());
+//            Thread.sleep(5000);
+//            System.out.println("线程状态：" + threadPoolExecutor.toString());
+//            threadPoolExecutor.shutdown();
+//            threadPoolExecutor.awaitTermination(10, TimeUnit.SECONDS);
+//            System.out.println("thread count "+ threadPoolExecutor.getPoolSize());
+//            System.out.println("线程状态：" + threadPoolExecutor.toString());
+            threadPoolExecutor.execute(() -> {
+                System.out.println("1--execute something");
+            });
+            threadPoolExecutor.execute(() -> {
+                System.out.println("2--execute something");
+            });
             threadPoolExecutor.shutdown();
-            threadPoolExecutor.awaitTermination(10, TimeUnit.SECONDS);
-            System.out.println("thread count "+ threadPoolExecutor.getPoolSize());
-            System.out.println("线程状态：" + threadPoolExecutor.toString());
+            Thread.currentThread().join();
         } catch (Exception e) {
             e.printStackTrace();
         }
