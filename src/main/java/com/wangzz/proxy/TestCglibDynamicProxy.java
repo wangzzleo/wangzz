@@ -1,5 +1,6 @@
 package com.wangzz.proxy;
 
+import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
 
@@ -10,6 +11,15 @@ import java.lang.reflect.Method;
  * @date
  */
 public class TestCglibDynamicProxy {
+
+    public static void main(String[] args) {
+        Enhancer enhancer = new Enhancer();
+        enhancer.setSuperclass(MyHello.class);
+        enhancer.setCallback(new HelloInteceptor());
+
+        Hello hello = (Hello)enhancer.create();
+        hello.sayHello();
+    }
 
     static interface Hello {
         void sayHello();
