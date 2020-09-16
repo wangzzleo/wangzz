@@ -1,65 +1,37 @@
 package com.wangzz.thread;
 
+import java.util.concurrent.TimeUnit;
+
 public class LockTest {
 
-    //定义类A
-    public static class A{
-        int i = 3;
+    public static class LockA {
+        byte[] bytes = new byte[1024*1024];
+        byte[] bytes2 = new byte[1024*1024];
     }
-    //等会要实验的静态引用a
 
+    public static LockA a = new LockA();
 
-private static A b = null;
+    static Object condition = new Object();
 
-    public static A a = new A();
     public static void main(String[] args) throws InterruptedException {
-        synchronized (b) {
-
-        }
         //实例化线程t1
-        Thread t1 = new Thread(new TestRun(a));
-        t1.start();
-        //为了先让t1进如synchronized，所以让主线程睡1s
-        Thread.sleep(1000);
-        //手动调用full gc 回收a
-        a=null;
-        //System.gc();
-        System.out.println("set a = null and do a full GC");
-        //等待线程t1结束
-        t1.join();
-        System.out.println("finish");
-    }
-
-    public void testA(A a1) {
-        a1 = null;
-    }
-
-    public void testB() {
-        a = null;
-    }
-
-    static class TestRun implements Runnable {
-
-        private A a;
-
-        public TestRun(A a) {
-            this.a =  a;
-        }
-
-        @Override
-        public void run() {
-            System.out.println("enter1");
+        Thread t1 = new Thread(() -> {
+            synchronized (a) {}
+            System.out.println("enter others thread， then lock");
             //睡三秒好让主线程gc
             try {
-                Thread.sleep(3000);
+//                TimeUnit.SECONDS.sleep(3);
+                a.wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("show a value");
-            //因为a已经被垃圾回收，看看是否报错
-            System.out.println(a.i);
-            System.out.println("leave1");
-        }
+        });
+        t1.start();
+        TimeUnit.SECONDS.sleep(1);
+        // 尝试回收锁对象
+        a = null;
+        System.gc();
+        t1.join();
     }
 
 }

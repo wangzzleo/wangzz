@@ -160,5 +160,11 @@
             <artifactId>spring-beans</artifactId>
             <version>5.2.5.RELEASE</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.caucho</groupId>
+            <artifactId>hessian</artifactId>
+            <version>4.0.7</version>
+        </dependency>
     </dependencies>
 </project>

@@ -18,7 +18,6 @@ public class BinarySearch {
         }finally {
             System.out.println("running finally");
         }
-
     }
 
     public static int binarySearch(int[] arr, int target) {
