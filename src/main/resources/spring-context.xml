@@ -13,4 +13,12 @@
         <property name="name" value="wangzz"/>
         <aop:scoped-proxy/>
     </bean>
+
+    <bean name="cycle1" class="com.wangzz.spring.CyCleDepe">
+        <property name="cyCleDepeTwo" ref="cycle2"/>
+    </bean>
+
+    <bean name="cycle2" class="com.wangzz.spring.CyCleDepeTwo">
+        <property name="cyCleDepe" ref="cycle1"/>
+    </bean>
 </beans>

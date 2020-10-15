@@ -4,82 +4,45 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+@SuppressWarnings({"AlibabaThreadShouldSetName", "AlibabaUndefineMagicConstant", "AliControlFlowStatementWithoutBraces"})
 public class ThreadPoolTest {
 
     public static void main(String[] args) {
         try {
-            ThreadPoolExecutor threadPoolExecutor =  new ThreadPoolExecutor(2,5,10,
-                    TimeUnit.SECONDS, new LinkedBlockingQueue<>(1)) {
-
-                void onShutdown() {
-
-                }
-
-                @Override
-                protected void terminated() {
-                    super.terminated();
-                    System.out.println("thread is " + Thread.currentThread().getName());
-                    System.out.println("stats is " + this.toString());
-                    System.out.println("execute the terminated...");
-                }
-            };
-            threadPoolExecutor.allowCoreThreadTimeOut(true);
+            ThreadPoolExecutor threadPoolExecutor =  new ThreadPoolExecutor(10,10,2,
+                    TimeUnit.SECONDS, new LinkedBlockingQueue<>(1));
             System.out.println("线程状态：" + threadPoolExecutor.toString());
-//            threadPoolExecutor.execute(() -> {
-//                try {
-//                    Thread.sleep(1000);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//                System.out.println("running first thread...");
-//            });
-//            threadPoolExecutor.execute(() -> {
-//                try {
-//                    Thread.sleep(1000);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//                System.out.println("running second thread...");
-//            });
-//            threadPoolExecutor.execute(() -> {
-//                try {
-//                    Thread.sleep(3000);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//                System.out.println("running third thread...");
-//            });
-//            System.out.println("线程状态：" + threadPoolExecutor.toString());
-//            try {
-//                threadPoolExecutor.execute(() -> {
-//                    try {
-//                        Thread.sleep(10000);
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
-//                    System.out.println("running fourth thread...");
-//                });
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//            Thread.sleep(5000);
-//            System.out.println("线程状态：" + threadPoolExecutor.toString());
-//            threadPoolExecutor.shutdown();
-//            threadPoolExecutor.awaitTermination(10, TimeUnit.SECONDS);
-//            System.out.println("thread count "+ threadPoolExecutor.getPoolSize());
-//            System.out.println("线程状态：" + threadPoolExecutor.toString());
-            threadPoolExecutor.execute(() -> {
-                System.out.println("1--execute something");
-            });
-            threadPoolExecutor.execute(() -> {
-                System.out.println("2--execute something");
-            });
-            threadPoolExecutor.shutdown();
-            Thread.currentThread().join();
+            new Thread("dddd"){
+                @Override
+                public void run() {
+                    testLock();
+                }
+            }.start();
+            threadPoolExecutor.allowCoreThreadTimeOut(true);
+            for (int i = 0; i < 10; i++) {
+                try {
+                    Thread.sleep(100);
+                } catch (Exception exception) {
+                    exception.printStackTrace();
+                }
+                threadPoolExecutor.execute(ThreadPoolTest::testLock);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
 
+    }
+
+    public static void testLock() {
+        System.out.println(Thread.currentThread().getName() + " : 准备进入锁...");
+        synchronized (ThreadPoolTest.class) {
+            try {
+                if ("dddd".equals(Thread.currentThread().getName())) Thread.sleep(5000);
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+            System.out.println(Thread.currentThread().getName() + " : 正在执行同步块代码...");
+        }
     }
 
 }
