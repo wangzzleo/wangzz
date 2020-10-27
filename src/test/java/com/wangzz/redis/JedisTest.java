@@ -3,27 +3,26 @@ package com.wangzz.redis;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.Pipeline;
-import redis.clients.jedis.Transaction;
+import redis.clients.jedis.*;
+import redis.clients.jedis.params.SetParams;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class JedisTest {
 
     Jedis commJedis;
 
     ThreadLocal<Jedis> jedisLocal = ThreadLocal.withInitial(() -> {
-        Jedis jedis1 = new Jedis("192.168.100.129");
-        jedis1.auth("aD9X4AAi");
-        return jedis1;
+        Jedis jedis = new Jedis();
+//        jedis1.auth("aD9X4AAi");
+        return jedis;
     });
 
     @Before
     public void initJedis() {
-        commJedis = new Jedis("192.168.100.129");
-        commJedis.auth("aD9X4AAi");
+        commJedis = new Jedis();
+//        commJedis.auth("aD9X4AAi");
     }
 
     @Before
@@ -38,17 +37,34 @@ public class JedisTest {
     }
 
     @Test
-    public void limitTest() {
+    public void limitTest() throws InterruptedException {
         String userBase = "user_";
-        for (int i = 0; i < 10; i++) {
-
+        long l = System.currentTimeMillis();
+        for (int i = 0; i < 10000; i++) {
+            System.out.println(System.currentTimeMillis() - l);
+            TimeUnit.MILLISECONDS.sleep(50);
+            System.out.println(userBase+i%10 + ":" + isAllow(userBase+i%10));
         }
     }
 
     public boolean isAllow(String userId) {
         Jedis jedis = jedisLocal.get();
-        jedis.setnx(userId, "0");
+        jedis.set(userId, "0", SetParams.setParams().nx().ex(3));
         return jedis.incr(userId) < 4;
+    }
+
+    public boolean isActionAllowed(String userId, String actionKey, int period, int maxCount) {
+        String key = String.format("hist:%s:%s", userId, actionKey);
+        long nowTs = System.currentTimeMillis();
+        Pipeline pipe = commJedis.pipelined();
+        pipe.multi();
+        pipe.zadd(key, nowTs, "" + nowTs);
+        pipe.zremrangeByScore(key, 0, nowTs - period * 1000);
+        Response<Long> count = pipe.zcard(key);
+        pipe.expire(key, period + 1);
+        pipe.exec();
+        pipe.close();
+        return count.get() <= maxCount;
     }
 
     @Test

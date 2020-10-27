@@ -22,10 +22,25 @@ public class PrototypeClass {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        PrototypeClass that = (PrototypeClass) o;
+
+        if (id != that.id) return false;
+        return name != null ? name.equals(that.name) : that.name == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        return result;
+    }
+
+    @Override
     public String toString() {
-        PrototypeClass prototypeClass = new PrototypeClass();
-        prototypeClass.setId(this.id);
-        prototypeClass.setName(this.name);
-        return getClass().getName() + "@" + Integer.toHexString(prototypeClass.hashCode());
+        return getClass().getName() + "@" + Integer.toHexString(this.hashCode());
     }
 }

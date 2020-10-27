@@ -3,6 +3,7 @@ package com.wangzz.proxy;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.util.Arrays;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -15,6 +16,7 @@ public class TestJDKDynamicProxy {
     public static void main(String[] args) {
         Hello hello = (Hello)Proxy.newProxyInstance(Hello.class.getClassLoader(), new Class[]{Hello.class}, new HelloInvocationHandler(new MyHello()));
         int b = hello.sayHello();
+        Arrays.stream(hello.getClass().getInterfaces()).forEach(System.out::println);
         System.out.println(b);
     }
 

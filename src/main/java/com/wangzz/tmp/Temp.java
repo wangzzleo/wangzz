@@ -422,7 +422,11 @@ public class Temp {
 //            }
 //        }
        // System.out.println("ddd");
-
+        int a = 1;
+        {
+            a = 2;
+        }
+        System.out.println(a);
     }
 
 }
