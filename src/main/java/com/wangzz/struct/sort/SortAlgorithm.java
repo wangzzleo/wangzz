@@ -5,7 +5,10 @@ import java.util.Arrays;
 public class SortAlgorithm {
 
     public static void main(String[] args) {
-
+        SortAlgorithm sortAlgorithm = new SortAlgorithm();
+        int[] nums = new int[]{1,32,4,56,7};
+        sortAlgorithm.quickSort(nums);
+        Arrays.stream(nums).forEach(e -> System.out.print(e + " "));
     }
 
     // 冒泡
@@ -37,8 +40,38 @@ public class SortAlgorithm {
     }
 
     // 快速排序
-    public void quickSort() {
+    public void quickSort(int[] numbers) {
+        if (numbers == null) {
+            return;
+        }
+        quickSort(numbers, 0, numbers.length - 1);
+    }
 
+    public void quickSort(int[] numbers, int left, int right) {
+        if (right <= left) {
+            return;
+        }
+        int pivot = numbers[left];
+        int start = left;
+        int end = right;
+        while (start < end) {
+            while (start < end && pivot <= numbers[end]) {
+                end--;
+            }
+            swapArr(numbers, start, end);
+            while (start < end && numbers[start] <= pivot) {
+                start++;
+            }
+            swapArr(numbers, start, end);
+        }
+        quickSort(numbers, left, start - 1);
+        quickSort(numbers, start + 1, right);
+    }
+
+    private void swapArr(int[] numbers, int left, int right) {
+        int temp = numbers[left];
+        numbers[left] = numbers[right];
+        numbers[right] = temp;
     }
 
     public void mergeSort() {
