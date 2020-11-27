@@ -7,8 +7,7 @@ package com.wangzz.extendstest;
 public class SubClass implements FarB {
 
     public static void main(String[] args) {
-        SubClass subClass = new SubClass();
-        System.out.println(subClass.sayHello());
+        FarClassA farClassA = new FarClassB();
     }
 
 }

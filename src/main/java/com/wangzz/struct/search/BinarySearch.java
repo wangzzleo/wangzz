@@ -7,17 +7,17 @@ package com.wangzz.struct.search;
 public class BinarySearch {
 
     public static void main(String[] args) {
-        System.out.println(binarySearch(new int[]{1, 2}, 2));
-//        System.out.println(sqrt(2, 10));
+//        System.out.println(binarySearch(new int[]{1, 2}, 2));
+        System.out.println(sqrt(100, 1));
 //        System.out.println(Math.pow(10, -10));
-
-        try {
-            Thread.currentThread().join();
-        } catch (InterruptedException e) {
-            System.err.println("exception");
-        }finally {
-            System.out.println("running finally");
-        }
+//
+//        try {
+//            Thread.currentThread().join();
+//        } catch (InterruptedException e) {
+//            System.err.println("exception");
+//        }finally {
+//            System.out.println("running finally");
+//        }
     }
 
     public static int binarySearch(int[] arr, int target) {
@@ -58,6 +58,25 @@ public class BinarySearch {
             }
         }
         return middle;
+    }
+
+    public int biSearch(int[] nums, int target) {
+        if (nums == null) {
+            return -1;
+        }
+        int left = 0;
+        int right = nums.length - 1;
+        while (left <= right) {
+            int middle = (left + right)/2;
+            if (nums[middle] == target) {
+                return middle;
+            } else if (nums[middle] < target) {
+                left = middle + 1;
+            } else if (target < nums[middle]) {
+                right = middle - 1;
+            }
+        }
+        return -1;
     }
 
 }

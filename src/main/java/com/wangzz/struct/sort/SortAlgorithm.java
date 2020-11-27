@@ -5,10 +5,26 @@ import java.util.Arrays;
 public class SortAlgorithm {
 
     public static void main(String[] args) {
-        SortAlgorithm sortAlgorithm = new SortAlgorithm();
-        int[] nums = new int[]{1,32,4,56,7};
-        sortAlgorithm.quickSort(nums);
-        Arrays.stream(nums).forEach(e -> System.out.print(e + " "));
+//        SortAlgorithm sortAlgorithm = new SortAlgorithm();
+//        int[] nums = new int[]{4,3,2,1};
+//        sortAlgorithm.quickSort(nums);
+//        Arrays.stream(nums).forEach(e -> System.out.print(e + " "));
+        try {
+            System.out.println(testThrow());
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+    }
+
+    public static String testThrow() {
+        try {
+            int a = 1/0;
+            return "a";
+        } catch (Throwable throwable) {
+            throw throwable;
+        } finally {
+            return "c";
+        }
     }
 
     // 冒泡
@@ -55,17 +71,17 @@ public class SortAlgorithm {
         int start = left;
         int end = right;
         while (start < end) {
-            while (start < end && pivot <= numbers[end]) {
+            while (start < end && pivot >= numbers[end]) {
                 end--;
             }
             swapArr(numbers, start, end);
-            while (start < end && numbers[start] <= pivot) {
+            while (start < end && numbers[start] >= pivot) {
                 start++;
             }
             swapArr(numbers, start, end);
         }
-        quickSort(numbers, left, start - 1);
-        quickSort(numbers, start + 1, right);
+        quickSort(numbers, left, end - 1);
+        quickSort(numbers, end + 1, right);
     }
 
     private void swapArr(int[] numbers, int left, int right) {
@@ -76,5 +92,25 @@ public class SortAlgorithm {
 
     public void mergeSort() {
 
+    }
+    
+    public static void bubbleSort2(int[] arr) {
+        if (arr == null) {
+            return;
+        }
+        boolean isChange = false;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] < arr[j+1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                    isChange = true;
+                }
+            }
+            if (!isChange) {
+                break;
+            }
+        }
     }
 }
