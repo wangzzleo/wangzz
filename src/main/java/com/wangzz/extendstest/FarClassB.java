@@ -6,9 +6,10 @@ package com.wangzz.extendstest;
  */
 public class FarClassB extends FarClassA {
 
-    @Override
-    public String sayHello() {
-        return "Hello World in FarClassB!";
-    }
+    public int a = 2;
 
+    @Override
+    public int getA() {
+        return a;
+    }
 }

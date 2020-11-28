@@ -4,11 +4,11 @@ package com.wangzz.extendstest;
  * @author wangzz
  * @date
  */
-public class FarClassA implements FarB {
+public class FarClassA {
 
-    @Override
-    public String sayHello() {
-        return "Hello World in FarClassA!";
+    public int a = 1;
+
+    public int getA() {
+        return a;
     }
-
 }

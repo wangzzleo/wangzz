@@ -4,6 +4,29 @@ import java.util.Arrays;
 
 public class SortAlgorithm {
 
+//    public static void main(String[] args) {
+////        SortAlgorithm sortAlgorithm = new SortAlgorithm();
+////        int[] nums = new int[]{4,3,2,1};
+////        sortAlgorithm.quickSort(nums);
+////        Arrays.stream(nums).forEach(e -> System.out.print(e + " "));
+//        try {
+//            System.out.println(testThrow());
+//        } catch (Exception exception) {
+//            exception.printStackTrace();
+//        }
+//    }
+
+    public static String testThrow() {
+        try {
+            int a = 1/0;
+            return "a";
+        } catch (Throwable throwable) {
+            throw throwable;
+        } finally {
+            return "c";
+        }
+    }
+
     // 冒泡
     public void bubbleSort(int[] numbers) {
         boolean numberSwitched;
@@ -44,7 +67,7 @@ public class SortAlgorithm {
         quickSort(numbers, 0, numbers.length - 1);
     }
 
-    public void quickSort(int[] a, int low, int hight) {
+    public void quickSort1(int[] a, int low, int hight) {
         int i, j, index;
         if (low > hight) {
             return;
@@ -65,6 +88,37 @@ public class SortAlgorithm {
         a[i] = index;// 将基准数值替换回 a[i]
         quickSort(a, low, i - 1); // 对低子表进行递归排序
         quickSort(a, i + 1, hight); // 对高子表进行递归排序
+        if (a == null) {
+            return;
+        }
+        quickSort(a, 0, a.length - 1);
+    }
+
+    public void quickSort(int[] numbers, int left, int right) {
+        if (right <= left) {
+            return;
+        }
+        int pivot = numbers[left];
+        int start = left;
+        int end = right;
+        while (start < end) {
+            while (start < end && pivot >= numbers[end]) {
+                end--;
+            }
+            swapArr(numbers, start, end);
+            while (start < end && numbers[start] >= pivot) {
+                start++;
+            }
+            swapArr(numbers, start, end);
+        }
+        quickSort(numbers, left, end - 1);
+        quickSort(numbers, end + 1, right);
+    }
+
+    private void swapArr(int[] numbers, int left, int right) {
+        int temp = numbers[left];
+        numbers[left] = numbers[right];
+        numbers[right] = temp;
     }
 
     // 归并排序
@@ -74,6 +128,24 @@ public class SortAlgorithm {
 
     // 选择排序
     public void selectionSort() {
-
+    }
+    public static void bubbleSort2(int[] arr) {
+        if (arr == null) {
+            return;
+        }
+        boolean isChange = false;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] < arr[j+1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                    isChange = true;
+                }
+            }
+            if (!isChange) {
+                break;
+            }
+        }
     }
 }
