@@ -426,7 +426,11 @@ public class Temp {
         {
             a = 2;
         }
-        System.out.println(a);
+        testStack();
+    }
+
+    private static void testStack() {
+        testStack();
     }
 
 }

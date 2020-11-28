@@ -44,9 +44,7 @@ public class HttpClientDemo {
             // URIBuilder 实用类来简化请求 URL的创建和修改.
             URI uri = new URIBuilder()
                     .setScheme("https")
-                    .setHost("www.baidu.com")
-                    .setPath("s")
-                    .setParameter("wd", "顺丰")
+                    .setHost("www.google.com")
                     .build();
             HttpGet httpGet = new HttpGet(uri);
             response1 = httpclient.execute(httpGet);

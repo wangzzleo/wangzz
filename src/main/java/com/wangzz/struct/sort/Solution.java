@@ -24,10 +24,12 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        int[] a = new int[]{1,2,3,0,0,0};
-        merge2(a, 3, new int[]{2,5,6},3);
+        int[] a = new int[100000];
         Arrays.stream(a).forEach(System.out::println);
-
+//        merge2(a, 3, new int[]{2,5,6},3);
+//        Arrays.stream(a).forEach(System.out::println);
+        bubbleSort3(a);
+        Arrays.stream(a).forEach(System.out::println);
     }
 
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
@@ -76,6 +78,57 @@ public class Solution {
 
         }
         if (m >= 0) System.arraycopy(temp, 0, nums1, 0 ,temp.length);
+    }
+
+    public void bubbleSort(int[] numbers) {
+        if (numbers == null || numbers.length == 0) {
+            return;
+        }
+        for (int i = 0; i < numbers.length - 1; i++) {
+            for (int j = i; j < numbers.length - 1 - i; j++) {
+                if (numbers[j+1] < numbers[j]) {
+                    int temp = numbers[j];
+                    numbers[j] = numbers[j+1];
+                    numbers[j+1] = temp;
+                }
+            }
+        }
+    }
+
+    public void bubbleSort2(int[] numbers) {
+        if (numbers == null || numbers.length == 0) {
+            return;
+        }
+        boolean switched;
+        do {
+            switched = false;
+            for (int i = 0; i < numbers.length - 1; i++) {
+                if (numbers[i+1] < numbers[i]) {
+                    int temp = numbers[i];
+                    numbers[i] = numbers[i+1];
+                    numbers[i+1] = temp;
+                    switched = true;
+                }
+            }
+        } while (switched);
+    }
+
+    public static void bubbleSort3(int[] numbers) {
+       // 冒泡排序
+       boolean flag = true;
+       for (int i = 0; i < numbers.length - 1; i++) {
+           for (int j = 0; j < numbers.length - i - 1; j++) {
+               if (numbers[j+1] < numbers[j]) {
+                    int temp = numbers[j];
+                    numbers[j] = numbers[j+1];
+                    numbers[j+1] = temp;
+                    flag = false;
+               }
+           }
+           if (flag) {
+               break;
+           }
+       }
     }
 
 }
