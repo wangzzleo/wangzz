@@ -56,7 +56,7 @@ public class TestSqlSession {
             //Optional<Blog> blog = mapper.selectBlog(99999999);
             //System.out.println(blog.isPresent() ? blog.get() : "不存在");
 
-            //List<Blog> blogs = mapper.selectAllBlog();
+            List<Blog> blogs = mapper.selectAllBlog();
             //System.out.println(blogs);
         } finally {
             sqlSession.close();

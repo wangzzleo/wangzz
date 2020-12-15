@@ -61,4 +61,12 @@ public class Temp implements Serializable {
         }
     }
 
+    private static void testStack() {
+        testStack();
+        List<String> list = new ArrayList<>(2);
+        list.add("a");
+        list.add("b");
+        list.add("b");
+    }
+
 }

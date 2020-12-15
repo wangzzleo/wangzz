@@ -4,17 +4,17 @@ import java.util.Arrays;
 
 public class SortAlgorithm {
 
-    public static void main(String[] args) {
-//        SortAlgorithm sortAlgorithm = new SortAlgorithm();
-//        int[] nums = new int[]{4,3,2,1};
-//        sortAlgorithm.quickSort(nums);
-//        Arrays.stream(nums).forEach(e -> System.out.print(e + " "));
-        try {
-            System.out.println(testThrow());
-        } catch (Exception exception) {
-            exception.printStackTrace();
-        }
-    }
+//    public static void main(String[] args) {
+////        SortAlgorithm sortAlgorithm = new SortAlgorithm();
+////        int[] nums = new int[]{4,3,2,1};
+////        sortAlgorithm.quickSort(nums);
+////        Arrays.stream(nums).forEach(e -> System.out.print(e + " "));
+//        try {
+//            System.out.println(testThrow());
+//        } catch (Exception exception) {
+//            exception.printStackTrace();
+//        }
+//    }
 
     public static String testThrow() {
         try {
@@ -55,12 +55,43 @@ public class SortAlgorithm {
         }
     }
 
+    public static void main(String[] args) {
+        int[] numbers = new int[]{5,2,3,1};
+        SortAlgorithm sortAlgorithm = new SortAlgorithm();
+        sortAlgorithm.quickSort(numbers);
+        Arrays.stream(numbers).forEach(System.out::print);
+    }
+
     // 快速排序
     public void quickSort(int[] numbers) {
-        if (numbers == null) {
+        quickSort(numbers, 0, numbers.length - 1);
+    }
+
+    public void quickSort1(int[] a, int low, int hight) {
+        int i, j, index;
+        if (low > hight) {
             return;
         }
-        quickSort(numbers, 0, numbers.length - 1);
+        i = low;
+        j = hight;
+        index = a[i]; // 用子表的第一个记录做基准
+        while (i < j) { // 从表的两端交替向中间扫描
+            while (i < j && a[j] >= index)
+                j--;
+            if (i < j)
+                a[i++] = a[j];// 用比基准小的记录替换低位记录
+            while (i < j && a[i] < index)
+                i++;
+            if (i < j) // 用比基准大的记录替换高位记录
+                a[j--] = a[i];
+        }
+        a[i] = index;// 将基准数值替换回 a[i]
+        quickSort(a, low, i - 1); // 对低子表进行递归排序
+        quickSort(a, i + 1, hight); // 对高子表进行递归排序
+        if (a == null) {
+            return;
+        }
+        quickSort(a, 0, a.length - 1);
     }
 
     public void quickSort(int[] numbers, int left, int right) {
@@ -90,10 +121,14 @@ public class SortAlgorithm {
         numbers[right] = temp;
     }
 
+    // 归并排序
     public void mergeSort() {
 
     }
-    
+
+    // 选择排序
+    public void selectionSort() {
+    }
     public static void bubbleSort2(int[] arr) {
         if (arr == null) {
             return;
