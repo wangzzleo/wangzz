@@ -20,7 +20,7 @@ public class TestJDKDynamicProxy {
         System.out.println(b);
     }
 
-    static interface Hello {
+    interface Hello {
         int sayHello();
     }
 
