@@ -56,7 +56,7 @@ public class SortAlgorithm {
     }
 
     public static void main(String[] args) {
-        int[] numbers = new int[]{5,2,3,1};
+        int[] numbers = new int[]{5,2,3,1,1};
         SortAlgorithm sortAlgorithm = new SortAlgorithm();
         sortAlgorithm.quickSort(numbers);
         Arrays.stream(numbers).forEach(System.out::print);
@@ -86,27 +86,26 @@ public class SortAlgorithm {
                 a[j--] = a[i];
         }
         a[i] = index;// 将基准数值替换回 a[i]
-        quickSort(a, low, i - 1); // 对低子表进行递归排序
-        quickSort(a, i + 1, hight); // 对高子表进行递归排序
-        if (a == null) {
-            return;
-        }
-        quickSort(a, 0, a.length - 1);
+        quickSort1(a, low, i - 1); // 对低子表进行递归排序
+        quickSort1(a, i + 1, hight); // 对高子表进行递归排序
+        quickSort1(a, 0, a.length - 1);
     }
 
+    int count = 0;
     public void quickSort(int[] numbers, int left, int right) {
         if (right <= left) {
             return;
         }
+        System.out.println(++count);
         int pivot = numbers[left];
         int start = left;
         int end = right;
         while (start < end) {
-            while (start < end && pivot >= numbers[end]) {
+            while (start < end && pivot <= numbers[end]) {
                 end--;
             }
             swapArr(numbers, start, end);
-            while (start < end && numbers[start] >= pivot) {
+            while (start < end && numbers[start] <= pivot) {
                 start++;
             }
             swapArr(numbers, start, end);

@@ -1,6 +1,7 @@
 package com.wangzz.struct.sort;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Solution {
 
@@ -24,12 +25,19 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        int[] a = new int[100000];
-        Arrays.stream(a).forEach(System.out::println);
-//        merge2(a, 3, new int[]{2,5,6},3);
-//        Arrays.stream(a).forEach(System.out::println);
-        bubbleSort3(a);
-        Arrays.stream(a).forEach(System.out::println);
+        long sum = 0;
+        for (int c = 0; c<100; c++) {
+            int[] a = new int[10000];
+            Random random = new Random();
+            for (int i = 0; i < a.length; i++) {
+                a[i] = random.nextInt(100);
+            }
+            long l = System.currentTimeMillis();
+            bubbleSort(a);
+            sum += System.currentTimeMillis() - l;
+        }
+        System.out.println("耗时：" + sum/10);
+
     }
 
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
@@ -80,17 +88,22 @@ public class Solution {
         if (m >= 0) System.arraycopy(temp, 0, nums1, 0 ,temp.length);
     }
 
-    public void bubbleSort(int[] numbers) {
-        if (numbers == null || numbers.length == 0) {
+    public static void bubbleSort(int[] numbers) {
+        if (numbers == null) {
             return;
         }
         for (int i = 0; i < numbers.length - 1; i++) {
-            for (int j = i; j < numbers.length - 1 - i; j++) {
-                if (numbers[j+1] < numbers[j]) {
+            boolean changed = false;
+            for (int j = 0; j < numbers.length - 1 - i; j++) {
+                if (numbers[j] > numbers[j+1]) {
                     int temp = numbers[j];
                     numbers[j] = numbers[j+1];
                     numbers[j+1] = temp;
+                    changed = true;
                 }
+            }
+            if (!changed) {
+                break;
             }
         }
     }

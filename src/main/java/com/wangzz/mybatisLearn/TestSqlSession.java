@@ -10,7 +10,9 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.File;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 public class TestSqlSession {
@@ -43,21 +45,22 @@ public class TestSqlSession {
 //                    System.out.print("=");
 //                }
 //            }
-            Blog blog = new Blog();
-            blog.setName("blog123123");
-            blog.setTitle("myblog");
-            blog.setPage(1223);
-            blog.setStatus(1);
-            int insert = mapper.insert(blog);
-            System.out.println(blog.getId());
+//            Blog blog = new Blog();
+//            blog.setName("blog123123");
+//            blog.setTitle("myblog");
+//            blog.setPage(1223);
+//            blog.setStatus(1);
+//            int insert = mapper.insert(blog);
+//            System.out.println(blog.getId());
 //
-            sqlSession.commit();
+//            sqlSession.commit();
 
             //Optional<Blog> blog = mapper.selectBlog(99999999);
             //System.out.println(blog.isPresent() ? blog.get() : "不存在");
-
-            List<Blog> blogs = mapper.selectAllBlog();
-            //System.out.println(blogs);
+            Map<String, Object> param = new HashMap<>();
+            param.put("id", "1 or 1=1");
+            List<Blog> blogs = mapper.selectById(param);
+            System.out.println(blogs);
         } finally {
             sqlSession.close();
         }

@@ -30,4 +30,9 @@
     <insert id="insert" parameterType="com.wangzz.mybatisLearn.bean.Blog" useGeneratedKeys="true" keyProperty="id">
         insert into blog (name,title,page,status) values (#{name},#{title},#{page},#{status})
     </insert>
+
+    <!-- select MIN(id) as id ,name,title,page,status from Blog where id = 123123123123 -->
+    <select id="selectAllBlog" resultMap="blogResult">
+        select id ,name,title,page,status from Blog where id in(123123123123,123123123125,123123123124)
+    </select>
 </mapper>
