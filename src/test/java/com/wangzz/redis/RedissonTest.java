@@ -22,25 +22,24 @@ public class RedissonTest {
 
     @Before
     public void before() {
-        properties = new Properties();
-        InputStream in = null;
-        try {
-            in = Class.forName("com.wangzz.redis.RedissonTest").getResourceAsStream(DATABASE_CONFIG_FILE);
-            properties.load(in);
-        } catch (Exception e) {
-            System.err
-                    .println("Error reading conf properties in AccountPertiesUtils.loadProps() "
-                            + e);
-            e.printStackTrace();
-        } finally {
-            try {
-                in.close();
-            } catch (Exception e) {
-            }
-        }
+//        properties = new Properties();
+//        InputStream in = null;
+//        try {
+//            in = Class.forName("com.wangzz.redis.RedissonTest").getResourceAsStream(DATABASE_CONFIG_FILE);
+//            properties.load(in);
+//        } catch (Exception e) {
+//            System.err
+//                    .println("Error reading conf properties in AccountPertiesUtils.loadProps() "
+//                            + e);
+//            e.printStackTrace();
+//        } finally {
+//            try {
+//                in.close();
+//            } catch (Exception e) {
+//            }
+//        }
         Config config = new Config();
-        config.useSingleServer().setAddress(properties.getProperty("redis.host"))
-                .setPassword(properties.getProperty("redis.password"));
+        config.useSingleServer().setAddress("redis://localhost:6379");
         redisson = Redisson.create(config);
     }
 
@@ -51,10 +50,14 @@ public class RedissonTest {
 
     @Test
     public void testBucket() {
-        RBucket<String> name_test = redisson.getBucket("name_test", new StringCodec());
-        name_test.set("wangzz");
-
-        System.out.println(name_test.get());
+        RLock testlock = redisson.getLock("testlock");
+        testlock.lock();
+        try {
+            Thread.sleep(15000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        testlock.unlock();
     }
 
     @Test
