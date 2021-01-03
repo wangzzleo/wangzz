@@ -1,8 +1,6 @@
 package com.wangzz.thread;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -16,21 +14,31 @@ public class ThreadLocalDemo {
     private static ThreadLocal<String> threadLocal2 = new ThreadLocal<>();
 
     public static void main(String[] args) {
-        ExecutorService service = Executors.newFixedThreadPool(10);
-        AtomicInteger integer = new AtomicInteger(0);
+        ExecutorService service = new ThreadPoolExecutor(10,10,0,TimeUnit.DAYS,new LinkedBlockingQueue<>());
+        AtomicInteger integer = new AtomicInteger(1);
         for (int i = 0; i < 10; i++) {
             service.execute(() -> {
                 setNum(integer.getAndIncrement());
-                setString(Thread.currentThread().getName());
-                try {
-                    TimeUnit.MILLISECONDS.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+//                setString(Thread.currentThread().getName());
                 System.out.println(Thread.currentThread().getName() +" 取出 " + getNum());
-                System.out.println(Thread.currentThread().getName() +" 取出 " + getString());
+//                System.out.println(Thread.currentThread().getName() +" 取出 " + getString());
             });
         }
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+//        threadLocal = null;
+        System.gc();
+//        System.out.println(Thread.currentThread().getName() +" 取出 " + getNum());
+        service.execute(() -> {
+//            setNum(integer.getAndIncrement());
+//                setString(Thread.currentThread().getName());
+            ThreadLocal<String> temp = new ThreadLocal<>();
+            temp.get();
+//                System.out.println(Thread.currentThread().getName() +" 取出 " + getString());
+        });
     }
 
     private static void setNum(int num) {
@@ -38,7 +46,7 @@ public class ThreadLocalDemo {
         threadLocal.set(num);
     }
 
-    private static int getNum() {
+    private static Integer getNum() {
         return threadLocal.get();
     }
 
