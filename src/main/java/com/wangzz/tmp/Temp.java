@@ -16,14 +16,15 @@ public class Temp implements Serializable {
     private static Integer i = 10;
 
     public static void main(String[] args) {
-        KeyTest keyTest = new KeyTest(1);
-        Map<KeyTest, String> map = new HashMap<>();
-        map.put(keyTest, "八宝粥");
-        System.out.println(map);
-        System.out.println(map.get(keyTest));
-        keyTest.id = 2;
-        System.out.println(map);
-        System.out.println(map.get(keyTest));
+        System.out.println(int.class == Integer.TYPE);
+//        KeyTest keyTest = new KeyTest(1);
+//        Map<KeyTest, String> map = new HashMap<>();
+//        map.put(keyTest, "八宝粥");
+//        System.out.println(map);
+//        System.out.println(map.get(keyTest));
+//        keyTest.id = 2;
+//        System.out.println(map);
+//        System.out.println(map.get(keyTest));
     }
 
     static class KeyTest {
