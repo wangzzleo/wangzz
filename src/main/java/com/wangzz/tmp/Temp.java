@@ -16,7 +16,7 @@ public class Temp implements Serializable {
     private static Integer i = 10;
 
     public static void main(String[] args) {
-        System.out.println(int.class == Integer.TYPE);
+//        System.out.println(int.class == Integer.TYPE);
 //        KeyTest keyTest = new KeyTest(1);
 //        Map<KeyTest, String> map = new HashMap<>();
 //        map.put(keyTest, "八宝粥");
@@ -25,6 +25,21 @@ public class Temp implements Serializable {
 //        keyTest.id = 2;
 //        System.out.println(map);
 //        System.out.println(map.get(keyTest));
+        System.out.println(testReturn());
+    }
+
+    public static int testReturn () {
+        try {
+            System.out.println("try");
+            int i = 1/0;
+            return 0;
+        } catch (Exception e) {
+            System.out.println("catch");
+            throw new RuntimeException("aaa");
+        } finally {
+            System.out.println("finally");
+            return 1;
+        }
     }
 
     static class KeyTest {

@@ -26,6 +26,7 @@ class SemaphoreWorker implements Runnable {
             semaphore.acquire();
             log("acquired a permit!");
             log("executed!");
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
