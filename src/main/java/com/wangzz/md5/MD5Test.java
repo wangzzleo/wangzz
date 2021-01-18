@@ -1,6 +1,5 @@
 package com.wangzz.md5;
 
-import sun.security.provider.MD5;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
