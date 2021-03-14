@@ -10,7 +10,7 @@ public class ConditionTest {
     private static Condition condition = lock.newCondition();
 
     public static void main(String[] args) {
-            
+        System.out.println("hello");
     }
 
 
